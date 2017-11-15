@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="今天开始学习XSS。  1.XSS：通过“HTML注入”篡改网页，插入恶意脚本，从而控制用户浏览器。根据效果分为：1.反射XSS（非持久）：把用户（往往是黑客）输入反射给浏览器 2.存储型xss（持久）：把用户输入的数据储存在服务器，等待其他用户（往往不知情）访问 3.DOM XSS（可以划分在1）：修改DOM（标签等）形成XSS。 2.XSS playload:低级cookike劫持，但是很容易">
+<meta name="description" content="呵呵？？？？？？？？  csrf（跨站点请求伪造）：某个请求是攻击者伪造的，诱导用户进入陷阱。csrf需要通过服务器验证才能生效，这就需要使用cookie,cookie又分为临时和本地的，在IE和Safari不允许不同域获取本地cookie（第三方）而火狐谷歌则允许不同域获取本地cookie（第三方）。也就是在IE或Safari中，www.b.com若想用csrf攻击www.a.com时a上set">
 <meta name="keywords" content="normal">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Crown&amp;Ambition">
-<meta property="og:url" content="http://yoursite.com/2017/11/04/17-11-4/index.html">
+<meta property="og:title" content="自暴自弃">
+<meta property="og:url" content="http://yoursite.com/2017/11/16/17-11-16-2/index.html">
 <meta property="og:site_name" content="A funny p1g">
-<meta property="og:description" content="今天开始学习XSS。  1.XSS：通过“HTML注入”篡改网页，插入恶意脚本，从而控制用户浏览器。根据效果分为：1.反射XSS（非持久）：把用户（往往是黑客）输入反射给浏览器 2.存储型xss（持久）：把用户输入的数据储存在服务器，等待其他用户（往往不知情）访问 3.DOM XSS（可以划分在1）：修改DOM（标签等）形成XSS。 2.XSS playload:低级cookike劫持，但是很容易">
+<meta property="og:description" content="呵呵？？？？？？？？  csrf（跨站点请求伪造）：某个请求是攻击者伪造的，诱导用户进入陷阱。csrf需要通过服务器验证才能生效，这就需要使用cookie,cookie又分为临时和本地的，在IE和Safari不允许不同域获取本地cookie（第三方）而火狐谷歌则允许不同域获取本地cookie（第三方）。也就是在IE或Safari中，www.b.com若想用csrf攻击www.a.com时a上set">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-13T08:52:19.382Z">
+<meta property="og:updated_time" content="2017-11-15T17:52:44.853Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Crown&amp;Ambition">
-<meta name="twitter:description" content="今天开始学习XSS。  1.XSS：通过“HTML注入”篡改网页，插入恶意脚本，从而控制用户浏览器。根据效果分为：1.反射XSS（非持久）：把用户（往往是黑客）输入反射给浏览器 2.存储型xss（持久）：把用户输入的数据储存在服务器，等待其他用户（往往不知情）访问 3.DOM XSS（可以划分在1）：修改DOM（标签等）形成XSS。 2.XSS playload:低级cookike劫持，但是很容易">
+<meta name="twitter:title" content="自暴自弃">
+<meta name="twitter:description" content="呵呵？？？？？？？？  csrf（跨站点请求伪造）：某个请求是攻击者伪造的，诱导用户进入陷阱。csrf需要通过服务器验证才能生效，这就需要使用cookie,cookie又分为临时和本地的，在IE和Safari不允许不同域获取本地cookie（第三方）而火狐谷歌则允许不同域获取本地cookie（第三方）。也就是在IE或Safari中，www.b.com若想用csrf攻击www.a.com时a上set">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/04/17-11-4/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/16/17-11-16-2/"/>
 
 
 
 
 
-  <title>Crown&Ambition | A funny p1g</title>
+  <title>自暴自弃 | A funny p1g</title>
   
 
 
@@ -243,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/04/17-11-4/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/16/17-11-16-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="1Yy">
@@ -260,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Crown&Ambition</h1>
+          <h1 class="post-title" itemprop="name headline">自暴自弃</h1>
         
 
         <div class="post-meta">
@@ -272,8 +272,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-04T18:51:59+08:00">
-                2017-11-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-16T00:59:01+08:00">
+                2017-11-16
               </time>
             
 
@@ -310,13 +310,13 @@
       
 
       
-        <p>今天开始学习XSS。<br></p>
+        <p>呵呵？？？？？？？？<br></p>
 <ul>
-<li>1.XSS：通过“HTML注入”篡改网页，插入恶意脚本，从而控制用户浏览器。根据效果分为：1.反射XSS（非持久）：把用户（往往是黑客）输入反射给浏览器 2.存储型xss（持久）：把用户输入的数据储存在服务器，等待其他用户（往往不知情）访问 3.DOM XSS（可以划分在1）：修改DOM（标签等）形成XSS。</li>
-<li>2.XSS playload:低级cookike劫持，但是很容易防御，比如与客户端IP绑定。高级的有：get与post请求：得到想要的ID，钓鱼，识别浏览器：alter(navigator.userAgent)等，识别用户安装的软件：每个软件相对的ACTIVEX控件都有唯一ID、或者通过识别图标来确定，通过JAVAapplet接口获取本地IP。<br><a id="more"></a>
+<li>csrf（跨站点请求伪造）：某个请求是攻击者伪造的，诱导用户进入陷阱。csrf需要通过服务器验证才能生效，这就需要使用cookie,cookie又分为临时和本地的，在IE和Safari不允许不同域获取本地cookie（第三方）而火狐谷歌则允许不同域获取本地cookie（第三方）。<br>也就是在IE或Safari中，www.b.com若想用csrf攻击www.a.com时a上set-cookie不会成功传所以传不到b去导致攻击无法成功，而在火狐谷歌则会成功。但若使用p3p头，所有浏览器都不会拦截第三方cookie的发送。<br>csrf的防御:1.验证码，让伪造的攻击被用户察觉，最简单有效。2.来源检查，服务器只对确定来源的请求开放。3.加密，csrf的重要操作都是可以被攻击者猜测到的，所以在用户和服务器约定一个公钥是一个解决办法，任何请求都需验证密钥。通常采用token值，真随机。</li>
+<li>点击劫持：让用户点击透明或者伪造的iframe（诱导用户和页面产生交互行为）。点击劫持和csrf都是在用户不知情的情况下完成攻击。<br>分为：1.falsh点击劫持，一个falsh游戏一步一步诱导用户进入陷阱。2.图片覆盖攻击（xsio），在重要的图片或信息上建立攻击用iframe。3.拖拽劫持与数据窃取，因拖拽流行，原理类似falsh劫持来完成数据窃取。4.触屏劫持，利用手机上的一些视觉效果比如在原来的搜索框隐藏时伪造搜索框。<br>点击劫持的防御：frame busting。原理：请求地址和地址栏的地址是否相同。<br><a id="more"></a> 
 </li>
 </ul>
-<p>今天的歌曲是<a href="https://y.qq.com/n/yqq/song/00394z9S2ciPAD.html" target="_blank" rel="external">Legends Never Die</a>。有谁想到SSG3：0SKT呢？或许只有刻苦的三星队员。<br>上周一个青春结束了，这周又结束了另外一个吧。总会到需要面对现实的那一天。<br>晚安。来自AM 4:00。</p>
+<p>我自暴自弃还是你愚蠢至极？有人对你生活操碎了心，有人希望你一步飞黄腾达。<br>不多说啦，明天要开始练字和准备六级考试..两次都缺考希望可以一次过！今天我葱的建议好棒！<br><a href="https://y.qq.com/n/yqq/song/0031MMo90FDbTl.html" target="_blank" rel="external">一次就好</a>。你憧憬的生活却敌不过那个人的消失。<br>晚安拉~</p>
 
       
     </div>
@@ -347,8 +347,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/03/17-11-3-2/" rel="next" title="没有银弹">
-                <i class="fa fa-chevron-left"></i> 没有银弹
+              <a href="/2017/11/15/17-11-15/" rel="next" title="T.T">
+                <i class="fa fa-chevron-left"></i> T.T
               </a>
             
           </div>
@@ -356,10 +356,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/06/17-11-5/" rel="prev" title="生日快乐">
-                生日快乐 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
