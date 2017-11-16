@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="学习XSS中..有点飘  今天快速的看完了XSS的进攻内容。在昨天的内容后又讲了：XSS蠕虫，FalshXSS等更为厉害的攻击方式。在攻击中，攻击者需要得到可用的JS这就需要用到一些调试工具，比如：firebug等。还需要一些XSS构造技巧：利用字符编码可以逃过编码搜索，绕过长度限制，利用BASE标签（相对路径）等。一些成熟的JS开发框架也有XSS漏洞。DOJO，YUI,JQ都存在。明天开始看防御">
+<meta name="description" content="循着小葱的建议开始看服务器端的知识。  注入攻击的本质：1.能够用户控制输入 2.原来执行的代码拼接了用户的输入。sql注入有一个盲注技巧，通过输入简单的条件语句观察返回值是否变化来判断sql漏洞是否存在。sql注入攻击主要依赖数据库的攻击，所以数据库攻击技巧十分重要。最常见的是利用union select确认表，列是否存在；@@version确认数据库版本；根据字符范围确定正确用户名密码。">
 <meta name="keywords" content="normal">
 <meta property="og:type" content="article">
-<meta property="og:title" content="生日快乐">
-<meta property="og:url" content="http://yoursite.com/2017/11/06/17-11-5/index.html">
+<meta property="og:title" content="很正常的一天">
+<meta property="og:url" content="http://yoursite.com/2017/11/17/17-11-17/index.html">
 <meta property="og:site_name" content="A funny p1g">
-<meta property="og:description" content="学习XSS中..有点飘  今天快速的看完了XSS的进攻内容。在昨天的内容后又讲了：XSS蠕虫，FalshXSS等更为厉害的攻击方式。在攻击中，攻击者需要得到可用的JS这就需要用到一些调试工具，比如：firebug等。还需要一些XSS构造技巧：利用字符编码可以逃过编码搜索，绕过长度限制，利用BASE标签（相对路径）等。一些成熟的JS开发框架也有XSS漏洞。DOJO，YUI,JQ都存在。明天开始看防御">
+<meta property="og:description" content="循着小葱的建议开始看服务器端的知识。  注入攻击的本质：1.能够用户控制输入 2.原来执行的代码拼接了用户的输入。sql注入有一个盲注技巧，通过输入简单的条件语句观察返回值是否变化来判断sql漏洞是否存在。sql注入攻击主要依赖数据库的攻击，所以数据库攻击技巧十分重要。最常见的是利用union select确认表，列是否存在；@@version确认数据库版本；根据字符范围确定正确用户名密码。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-14T11:22:50.291Z">
+<meta property="og:updated_time" content="2017-11-16T17:56:13.152Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="生日快乐">
-<meta name="twitter:description" content="学习XSS中..有点飘  今天快速的看完了XSS的进攻内容。在昨天的内容后又讲了：XSS蠕虫，FalshXSS等更为厉害的攻击方式。在攻击中，攻击者需要得到可用的JS这就需要用到一些调试工具，比如：firebug等。还需要一些XSS构造技巧：利用字符编码可以逃过编码搜索，绕过长度限制，利用BASE标签（相对路径）等。一些成熟的JS开发框架也有XSS漏洞。DOJO，YUI,JQ都存在。明天开始看防御">
+<meta name="twitter:title" content="很正常的一天">
+<meta name="twitter:description" content="循着小葱的建议开始看服务器端的知识。  注入攻击的本质：1.能够用户控制输入 2.原来执行的代码拼接了用户的输入。sql注入有一个盲注技巧，通过输入简单的条件语句观察返回值是否变化来判断sql漏洞是否存在。sql注入攻击主要依赖数据库的攻击，所以数据库攻击技巧十分重要。最常见的是利用union select确认表，列是否存在；@@version确认数据库版本；根据字符范围确定正确用户名密码。">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/06/17-11-5/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/17/17-11-17/"/>
 
 
 
 
 
-  <title>生日快乐 | A funny p1g</title>
+  <title>很正常的一天 | A funny p1g</title>
   
 
 
@@ -243,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/06/17-11-5/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/17/17-11-17/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="1Yy">
@@ -260,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">生日快乐</h1>
+          <h1 class="post-title" itemprop="name headline">很正常的一天</h1>
         
 
         <div class="post-meta">
@@ -272,8 +272,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-06T01:38:00+08:00">
-                2017-11-06
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-17T01:41:22+08:00">
+                2017-11-17
               </time>
             
 
@@ -310,12 +310,10 @@
       
 
       
-        <p>学习XSS中..有点飘<br></p>
+        <p>循着小葱的建议开始看服务器端的知识。<br></p>
 <ul>
-<li>今天快速的看完了XSS的进攻内容。在昨天的内容后又讲了：XSS蠕虫，FalshXSS等更为厉害的攻击方式。<br>在攻击中，攻击者需要得到可用的JS这就需要用到一些调试工具，比如：firebug等。还需要一些XSS构造技巧：利用字符编码可以逃过编码搜索，绕过长度限制，利用BASE标签（相对路径）等。<br>一些成熟的JS开发框架也有XSS漏洞。DOJO，YUI,JQ都存在。<br>明天开始看防御部分，后天可能会看一些视频。<br><a id="more"></a>
-</li>
+<li>注入攻击的本质：1.能够用户控制输入 2.原来执行的代码拼接了用户的输入。sql注入有一个盲注技巧，通过输入简单的条件语句观察返回值是否变化来判断sql漏洞是否存在。<br>sql注入攻击主要依赖数据库的攻击，所以数据库攻击技巧十分重要。最常见的是利用union select确认表，列是否存在；@@version确认数据库版本；根据字符范围确定正确用户名密码。</li>
 </ul>
-<p>一位刘同学说：今天是冉天狗同学的生日，他想点播一首<a href="https://y.qq.com/n/yqq/song/000dWjyk4G5V6k.html" target="_blank" rel="external">生日歌</a>送给他最好的兄弟，并祝他天天开心梦想成真。<br>HappyBirthday！生日快乐~</p>
 
       
     </div>
@@ -346,8 +344,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/04/17-11-4/" rel="next" title="Crown&Ambition">
-                <i class="fa fa-chevron-left"></i> Crown&Ambition
+              <a href="/2017/11/16/17-11-16-2/" rel="next" title="自暴自弃">
+                <i class="fa fa-chevron-left"></i> 自暴自弃
               </a>
             
           </div>
@@ -355,10 +353,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/07/17-11-6/" rel="prev" title="了无心愿">
-                了无心愿 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
