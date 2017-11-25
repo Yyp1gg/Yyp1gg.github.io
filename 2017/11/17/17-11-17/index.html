@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="循着小葱的建议开始看服务器端的知识。  注入攻击的本质：1.能够用户控制输入 2.原来执行的代码拼接了用户的输入。sql注入有一个盲注技巧，通过输入简单的条件语句观察返回值是否变化来判断sql漏洞是否存在。sql注入攻击主要依赖数据库的攻击，所以数据库攻击技巧十分重要。最常见的是利用union select确认表，列是否存在；@@version确认数据库版本；根据字符范围确定正确用户名密码。">
+<meta name="description" content="循着小葱的建议开始看服务器端的知识。  注入攻击的本质：1.能够用户控制输入 2.原来执行的代码拼接了用户的输入。判断sql漏洞是否存在往往需要使用盲注的技巧（一种猜测），通过真假条件语句判断是否可以注入，通常还需猜测参数是否被单引号包围。然后使用一次次的条件语句可以判断出数据库表名，用户字段名，用户密码长度和具体密码等。$ and 1=2 and ‘a’=’a’ //构造注入，若页面返回错误则进">
 <meta name="keywords" content="normal">
 <meta property="og:type" content="article">
-<meta property="og:title" content="很正常的一天">
+<meta property="og:title" content="不专注的几天">
 <meta property="og:url" content="http://yoursite.com/2017/11/17/17-11-17/index.html">
 <meta property="og:site_name" content="A funny p1g">
-<meta property="og:description" content="循着小葱的建议开始看服务器端的知识。  注入攻击的本质：1.能够用户控制输入 2.原来执行的代码拼接了用户的输入。sql注入有一个盲注技巧，通过输入简单的条件语句观察返回值是否变化来判断sql漏洞是否存在。sql注入攻击主要依赖数据库的攻击，所以数据库攻击技巧十分重要。最常见的是利用union select确认表，列是否存在；@@version确认数据库版本；根据字符范围确定正确用户名密码。">
+<meta property="og:description" content="循着小葱的建议开始看服务器端的知识。  注入攻击的本质：1.能够用户控制输入 2.原来执行的代码拼接了用户的输入。判断sql漏洞是否存在往往需要使用盲注的技巧（一种猜测），通过真假条件语句判断是否可以注入，通常还需猜测参数是否被单引号包围。然后使用一次次的条件语句可以判断出数据库表名，用户字段名，用户密码长度和具体密码等。$ and 1=2 and ‘a’=’a’ //构造注入，若页面返回错误则进">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-16T17:56:13.152Z">
+<meta property="og:updated_time" content="2017-11-25T15:19:42.197Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="很正常的一天">
-<meta name="twitter:description" content="循着小葱的建议开始看服务器端的知识。  注入攻击的本质：1.能够用户控制输入 2.原来执行的代码拼接了用户的输入。sql注入有一个盲注技巧，通过输入简单的条件语句观察返回值是否变化来判断sql漏洞是否存在。sql注入攻击主要依赖数据库的攻击，所以数据库攻击技巧十分重要。最常见的是利用union select确认表，列是否存在；@@version确认数据库版本；根据字符范围确定正确用户名密码。">
+<meta name="twitter:title" content="不专注的几天">
+<meta name="twitter:description" content="循着小葱的建议开始看服务器端的知识。  注入攻击的本质：1.能够用户控制输入 2.原来执行的代码拼接了用户的输入。判断sql漏洞是否存在往往需要使用盲注的技巧（一种猜测），通过真假条件语句判断是否可以注入，通常还需猜测参数是否被单引号包围。然后使用一次次的条件语句可以判断出数据库表名，用户字段名，用户密码长度和具体密码等。$ and 1=2 and ‘a’=’a’ //构造注入，若页面返回错误则进">
 
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <title>很正常的一天 | A funny p1g</title>
+  <title>不专注的几天 | A funny p1g</title>
   
 
 
@@ -260,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">很正常的一天</h1>
+          <h1 class="post-title" itemprop="name headline">不专注的几天</h1>
         
 
         <div class="post-meta">
@@ -312,8 +312,17 @@
       
         <p>循着小葱的建议开始看服务器端的知识。<br></p>
 <ul>
-<li>注入攻击的本质：1.能够用户控制输入 2.原来执行的代码拼接了用户的输入。sql注入有一个盲注技巧，通过输入简单的条件语句观察返回值是否变化来判断sql漏洞是否存在。<br>sql注入攻击主要依赖数据库的攻击，所以数据库攻击技巧十分重要。最常见的是利用union select确认表，列是否存在；@@version确认数据库版本；根据字符范围确定正确用户名密码。</li>
+<li><p>注入攻击的本质：1.能够用户控制输入 2.原来执行的代码拼接了用户的输入。判断sql漏洞是否存在往往需要使用盲注的技巧（一种猜测），通过真假条件语句判断是否可以注入，通常还需猜测参数是否被单引号包围。然后使用一次次的条件语句可以判断出数据库表名，<br>用户字段名，用户密码长度和具体密码等。<br>$ and 1=2 and ‘a’=’a’ //构造注入，若页面返回错误则进行真值判断<br>$ and 1=1 and ‘a’=’a’ //若页面返回成功说明存在漏洞<br>$ and (select count(<em>) from data)&gt;0 and ‘a’=’a //猜测表名是否是data，可反复测试。若成功返回值&gt;1<br>$ (select count(uname) from data)&gt;0 //猜测用户字段为uname。同理猜测密码字段等信息。<br>$ Select count(</em>) from data where uname=’p1ggy’ and len(upass)&gt;1)&gt;0 //猜测密码字段长度。修改len(upass)得到准确的值。<br>$ (Select count(<em>) from data where uname=’p1ggy’ and mid(upass,1,1)&lt;=’9’)&gt;0 //猜测第一位密码是否为数字。把upass的第一个字符提出来。确定字母还是数字后缩小范围。<br>$ (Select count(</em>) from data where uname=’p1ggy’ and mid(upass,1,1)&gt;=’a’)&gt;0 //猜测第一位密码是否为字母。<br>sql注入攻击主要依赖数据库的攻击，所以数据库攻击技巧十分重要。</p>
+</li>
+<li><p>数据库攻击技巧。<br>1.自动化注入工具可以帮助完成上述步骤<br>2.修改系统文件时可用load_file(),into dumpfile,load data infile.<br>3.加载用户自定义函数UDF执行命令。<br>4.在存储过程（功能类似udf）执行系统命令。有xp_cmdshell执行系统命令,xp_regread操作注册表等<br>5.超长值。strict_all_table，开启时输入长度超过限制会error，关闭时只有warning。当关闭时超长数据会插入成功，使用超长数据作为用户名可能会造成越权访问。选择时admin（55个空格）x等于admin。</p>
+<a id="more"></a>
+</li>
+<li><p>sql注入可能存在的地方<br>1.含有输入数据表单的页面（登录界面、查询界面、反馈界面等）。<br>2.含有用户信息、ID等的URL，类似于<a href="http://XXX/index.asp?ID=155，可以操作ID后的参数数据。" target="_blank" rel="external">http://XXX/index.asp?ID=155，可以操作ID后的参数数据。</a></p>
+</li>
+<li><p>sql注入的防御<br>1.最简单的是转义敏感字符。转义属于安全函数中。<br>2.最佳方式是使用预编译语句，绑定变量。在解析语句时使用x代替自由变量，仅在执行阶段带入变量值。即使攻击者插入类似于tom’ and ‘1’=’1’的语句，也只会查询被绑定的语句功能。<br>3.使用安全的存储过程对抗。效果和预编译类似。<br>4.检查数据类型。如限制用户输入的数据类型只能为integer，或严格按照时间、日期的格式输入、或输入长度。在特殊的场合比较好用。<br>5.屏蔽出错结果阻止攻击者知道攻击结果。</p>
+</li>
 </ul>
+<p>这是25号写完的。断断续续，不专注的看完了sql注入的基础介绍，并进行了两次实战操作。有一个大致的认识后明天看看稍微复杂的代码。<br>最近心态不好，多学习就是了，其他的事情也就没什么了。<br>这是一首不论什么时候听到都会开心的歌呀~<a href="https://y.qq.com/n/yqq/song/002W7aDn1RyKAN.html" target="_blank" rel="external">轻飘飘时间</a>。<br>真是冷死了，泡脚睡觉啦&gt;。&lt;</p>
 
       
     </div>
@@ -353,6 +362,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/11/23/17-11-23/" rel="prev" title="XiaoXiao">
+                XiaoXiao <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -424,7 +437,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
