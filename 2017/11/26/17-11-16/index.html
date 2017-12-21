@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="normal," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,18 +79,17 @@
 
 
 
-<meta name="description" content="以后再也不删配置文件了.t t">
-<meta name="keywords" content="normal">
+<meta name="description" content="下午早些看了另一个简单的注入技巧：进行UNION联合操作，通过报错来知道正确的数据库信息链接。 今天看的是书上文件上传漏洞的内容。  文件上传本身没有问题，但若用户上传了一个可执行的脚本并通过此脚本执行了服务器端命令的功能，这就是文件上传攻击。文件上传要满足3个条件：1.文件要被Web容器解释执行。 2.用户能够访问到此文件。 3.不能在上传时被修改。 可以通过：1.修改后缀名避免黑名单筛选。2">
 <meta property="og:type" content="article">
-<meta property="og:title" content="T.T">
-<meta property="og:url" content="http://yoursite.com/2017/11/16/17-11-16/index.html">
+<meta property="og:title" content="烧烤夜">
+<meta property="og:url" content="http://yoursite.com/2017/11/26/17-11-16/index.html">
 <meta property="og:site_name" content="A funny p1g">
-<meta property="og:description" content="以后再也不删配置文件了.t t">
+<meta property="og:description" content="下午早些看了另一个简单的注入技巧：进行UNION联合操作，通过报错来知道正确的数据库信息链接。 今天看的是书上文件上传漏洞的内容。  文件上传本身没有问题，但若用户上传了一个可执行的脚本并通过此脚本执行了服务器端命令的功能，这就是文件上传攻击。文件上传要满足3个条件：1.文件要被Web容器解释执行。 2.用户能够访问到此文件。 3.不能在上传时被修改。 可以通过：1.修改后缀名避免黑名单筛选。2">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-16T17:41:06.306Z">
+<meta property="og:updated_time" content="2017-12-15T14:25:11.770Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="T.T">
-<meta name="twitter:description" content="以后再也不删配置文件了.t t">
+<meta name="twitter:title" content="烧烤夜">
+<meta name="twitter:description" content="下午早些看了另一个简单的注入技巧：进行UNION联合操作，通过报错来知道正确的数据库信息链接。 今天看的是书上文件上传漏洞的内容。  文件上传本身没有问题，但若用户上传了一个可执行的脚本并通过此脚本执行了服务器端命令的功能，这就是文件上传攻击。文件上传要满足3个条件：1.文件要被Web容器解释执行。 2.用户能够访问到此文件。 3.不能在上传时被修改。 可以通过：1.修改后缀名避免黑名单筛选。2">
 
 
 
@@ -120,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/16/17-11-16/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/26/17-11-16/"/>
 
 
 
 
 
-  <title>T.T | A funny p1g</title>
+  <title>烧烤夜 | A funny p1g</title>
   
 
 
@@ -243,7 +242,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/16/17-11-16/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/26/17-11-16/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="1Yy">
@@ -260,7 +259,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">T.T</h1>
+          <h1 class="post-title" itemprop="name headline">烧烤夜</h1>
         
 
         <div class="post-meta">
@@ -272,8 +271,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-16T00:39:33+08:00">
-                2017-11-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-26T16:15:58+08:00">
+                2017-11-26
               </time>
             
 
@@ -310,7 +309,13 @@
       
 
       
-        <p>以后再也不删配置文件了.t t</p>
+        <p> 下午早些看了另一个简单的注入技巧：进行UNION联合操作，通过报错来知道正确的数据库信息<a href="http://www.jb51.net/hack/200734.html" target="_blank" rel="external">链接</a>。<br> 今天看的是书上文件上传漏洞的内容。</p>
+<ul>
+<li>文件上传本身没有问题，但若用户上传了一个可执行的脚本并通过此脚本执行了服务器端命令的功能，这就是文件上传攻击。文件上传要满足3个条件：1.文件要被Web容器解释执行。 2.用户能够访问到此文件。 3.不能在上传时被修改。</li>
+<li>可以通过：<br>1.修改后缀名避免黑名单筛选。<br>2.截断字符0x00。xxx.php[\0].jpg会被某些函数判断为xxx.php。<br>3.伪造文件头，将真实的文件附在合法的文件头后。正常情况判断前10个字节就可以判断真实类型。<br>4.利用apache中不认识的后缀名。（修复）<br>5.利用IIS中;（截断字符） 。<br>6.若有上传权限同时开启webdav(脚本资源访问)。可以用put上传文本文件后用move方法改写为脚本文件，从而执行webshell。<br>7.钓鱼。先将文件上传到目标网站，再传播合法url。</li>
+<li>防御：<br>1.上传的文件设置为不可执行。例如先做静态处理。<br>2.判断文件类型。使用白名单。<br>3.设置权限和随机数。最小权限原则和随机数能极大增加攻击成本。<br>4.单独设置文件服务器的域名。起到隐藏作用。<a id="more"></a>
+好久没去外面吃烧烤啦！吃得饱饱的时候去没吃多少，但是吹牛很开心啊。哈哈。祝福葱和小学姐（明明是个小妹妹..）还有曾盈和坤哥。<br><a href="https://y.qq.com/n/yqq/song/000drj9r0TOUGx.html" target="_blank" rel="external">超快感</a>。好久没看到小宝贝们了，明天爸爸就来。<br>晚安安~</li>
+</ul>
 
       
     </div>
@@ -326,12 +331,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/normal/" rel="tag"><i class="fa fa-moon-o" aria-hidden="true"></i> normal</a>
-          
-        </div>
-      
 
       
       
@@ -341,8 +340,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/15/17-11-15/" rel="next" title="T.T">
-                <i class="fa fa-chevron-left"></i> T.T
+              <a href="/2017/11/23/17-11-23/" rel="next" title="XiaoXiao">
+                <i class="fa fa-chevron-left"></i> XiaoXiao
               </a>
             
           </div>
@@ -351,8 +350,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/11/16/17-11-16-2/" rel="prev" title="自暴自弃">
-                自暴自弃 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/12/10/17-12-13/" rel="prev" title="12">
+                12 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -425,7 +424,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
