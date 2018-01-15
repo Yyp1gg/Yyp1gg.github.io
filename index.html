@@ -258,7 +258,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/07/18-1-7/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/2018/01/07/18-1-7/" itemprop="url">这样不太好</a></h1>
         
 
         <div class="post-meta">
@@ -270,7 +270,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-07T00:24:23+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-07T23:24:31+08:00">
                 2018-01-07
               </time>
             
@@ -309,9 +309,7 @@
 
       
         
-          <hr>
-<p>title: 这样不太好<br>date: 2018-01-07 00:24:23</p>
-<h2 id="tags-normal"><a href="#tags-normal" class="headerlink" title="tags: normal"></a>tags: normal</h2><p>15号补笔记中..6、7章的内容。<br><br>一、第六章上传漏洞。只要web允许上传文件就有可能产生文件上传漏洞。<br>(1).解析漏洞<br>攻击者利用上传漏洞时通常时通过web容器的解析漏洞达到目的。常见的web容器有iis，nginx，apacha，tomcat等。<br>1).iis解析漏洞<br>1.在建立.asa、.asp目录的文件都会被当作asp文件解析。比如test.txt和test.asp;1.jpg（图片木马，后文补充）<br>2.webdav漏洞。webdav时基于http1.1协议的通信协议，它扩展了http。若某web容器支持webdav并且支持get，put方法等，就可能存在webdav漏洞。<br>第一步发送options请求探测服务器支持的http方法。<br>第二步用get或put等方法上传shell文件shell.txt。<br>第三步用move或copy方法将shell.txt改名为shell.asp。这样就简单的获取了一个webshell。<br>2).apache解析漏洞<br>apache有一个扩展名白名单，当遇到不认识的扩展名时，就从后向前解析，直到碰到名单上有的扩展名为止。若都不认识，则会暴露源代码。比如有a.php.rar.aa文件，apapche容器只认识.php，就会把a文件当php文件解析。<br>3).nginx解析漏洞<br>nginx通常作为php的解析容器。当访问www.yy.com/1.jpg/shell.php，shell.php是隐藏在1.jpg的图片木马，其实不存在这个文件。这样就可以得到wenshell。<br>(2).绕过上传漏洞<br>文件上传的流程：客户端使用js验证，服务器端使用随机数重命名防止重复。程序猿防止上传漏洞的方法可以分为客户端用js检测和服务器端检测文件mime类型，扩展名合法否，存在恶意代码否。<br>1).绕过客户端js检测<br>js检测：checkfile()函数有一个白名单，点提交文件后（执行submit事件）通过js编写的checkfile()检测后，upload()函数会将文件上传至服务器。<br>1.使用firebug删除submit事件。<br>2.编写一个没有submit事件的表单替换原有的。<br>3.中间人攻击。在js验证后在传输层修改文件。<br>2).绕过服务器检测<br>1.服务器通常会对扩展名进行检测，一般使用黑白名单的策略。<br>黑名单攻击的方法：<br>a.找到程序猿忽略的扩展名<br>b.文件名大小写转换<br>c.“.asp.”=“.asp ”=“.asp”<br>白名单攻击方法：<br>a.test.asp;1.jpg<br>2.mime验证：指定打开某种扩展名的程序。<br>攻击方法：传输层修改文件扩展名。<br>3.截断上传攻击<br>比如，服务器验证的白名单扩展名有.jpg，将上传的文件名改为“shell.asp%001.jpg”，再将%00的值改为null，shell.asp后面的字符就会被截断。<br>(3).防御上传漏洞<br>1.建立完整的过滤目录<br>2.在upload()函数里让文件重命名，保留一个原有扩展名。<br>
+          <p>15号补笔记中..6、7章的内容。<br><br>一、第六章上传漏洞。只要web允许上传文件就有可能产生文件上传漏洞。<br>(1).解析漏洞<br>攻击者利用上传漏洞时通常时通过web容器的解析漏洞达到目的。常见的web容器有iis，nginx，apacha，tomcat等。<br>1).iis解析漏洞<br>1.在建立.asa、.asp目录的文件都会被当作asp文件解析。比如test.txt和test.asp;1.jpg（图片木马，后文补充）<br>2.webdav漏洞。webdav时基于http1.1协议的通信协议，它扩展了http。若某web容器支持webdav并且支持get，put方法等，就可能存在webdav漏洞。<br>第一步发送options请求探测服务器支持的http方法。<br>第二步用get或put等方法上传shell文件shell.txt。<br>第三步用move或copy方法将shell.txt改名为shell.asp。这样就简单的获取了一个webshell。<br>2).apache解析漏洞<br>apache有一个扩展名白名单，当遇到不认识的扩展名时，就从后向前解析，直到碰到名单上有的扩展名为止。若都不认识，则会暴露源代码。比如有a.php.rar.aa文件，apapche容器只认识.php，就会把a文件当php文件解析。<br>3).nginx解析漏洞<br>nginx通常作为php的解析容器。当访问www.yy.com/1.jpg/shell.php，shell.php是隐藏在1.jpg的图片木马，其实不存在这个文件。这样就可以得到wenshell。<br>(2).绕过上传漏洞<br>文件上传的流程：客户端使用js验证，服务器端使用随机数重命名防止重复。程序猿防止上传漏洞的方法可以分为客户端用js检测和服务器端检测文件mime类型，扩展名合法否，存在恶意代码否。<br>1).绕过客户端js检测<br>js检测：checkfile()函数有一个白名单，点提交文件后（执行submit事件）通过js编写的checkfile()检测后，upload()函数会将文件上传至服务器。<br>1.使用firebug删除submit事件。<br>2.编写一个没有submit事件的表单替换原有的。<br>3.中间人攻击。在js验证后在传输层修改文件。<br>2).绕过服务器检测<br>1.服务器通常会对扩展名进行检测，一般使用黑白名单的策略。<br>黑名单攻击的方法：<br>a.找到程序猿忽略的扩展名<br>b.文件名大小写转换<br>c.“.asp.”=“.asp ”=“.asp”<br>白名单攻击方法：<br>a.test.asp;1.jpg<br>2.mime验证：指定打开某种扩展名的程序。<br>攻击方法：传输层修改文件扩展名。<br>3.截断上传攻击<br>比如，服务器验证的白名单扩展名有.jpg，将上传的文件名改为“shell.asp%001.jpg”，再将%00的值改为null，shell.asp后面的字符就会被截断。<br>(3).防御上传漏洞<br>1.建立完整的过滤目录<br>2.在upload()函数里让文件重命名，保留一个原有扩展名。<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/01/07/18-1-7/#more" rel="contents">
