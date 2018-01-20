@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="好久没更博了到处混吃混喝 (。＾▽＾)  嘿嘿。 复习了访问控制和密码学，虽然忘了一些但看书看一会儿就想起来了。 然后看了web框架安全。主要讲了mvc框架（模型m，视图v，控制器c）的安全。简单来说就是”在正确的地方做正确的事”  。 举几个例子： 1.在对页面进行渲染的view层可以选择框架提供的编码方法但如果全部使用同一种编码方法很可能被攻击者绕过。所以可以根据是否有细分场景的不同编码方式">
+<meta name="description" content="好久没更博了到处混吃混喝 (。＾▽＾)  嘿嘿。 复习了访问控制和密码学，虽然忘了一些但看书看一会儿就想起来了。 然后看了web框架安全。主要讲了mvc框架（模型m，视图v，控制器c）的安全。简单来说就是&amp;quot;在正确的地方做正确的事&amp;quot;  。 举几个例子： 1.在对页面进行渲染的view层可以选择框架提供的编码方法但如果全部使用同一种编码方法很可能被攻击者绕过。所以可以根据是否有细分">
 <meta name="keywords" content="normal">
 <meta property="og:type" content="article">
 <meta property="og:title" content="12">
 <meta property="og:url" content="http://yoursite.com/2017/12/10/17-12-13/index.html">
 <meta property="og:site_name" content="A funny p1g">
-<meta property="og:description" content="好久没更博了到处混吃混喝 (。＾▽＾)  嘿嘿。 复习了访问控制和密码学，虽然忘了一些但看书看一会儿就想起来了。 然后看了web框架安全。主要讲了mvc框架（模型m，视图v，控制器c）的安全。简单来说就是”在正确的地方做正确的事”  。 举几个例子： 1.在对页面进行渲染的view层可以选择框架提供的编码方法但如果全部使用同一种编码方法很可能被攻击者绕过。所以可以根据是否有细分场景的不同编码方式">
+<meta property="og:description" content="好久没更博了到处混吃混喝 (。＾▽＾)  嘿嘿。 复习了访问控制和密码学，虽然忘了一些但看书看一会儿就想起来了。 然后看了web框架安全。主要讲了mvc框架（模型m，视图v，控制器c）的安全。简单来说就是&amp;quot;在正确的地方做正确的事&amp;quot;  。 举几个例子： 1.在对页面进行渲染的view层可以选择框架提供的编码方法但如果全部使用同一种编码方法很可能被攻击者绕过。所以可以根据是否有细分">
 <meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2017-12-15T08:52:01.343Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="12">
-<meta name="twitter:description" content="好久没更博了到处混吃混喝 (。＾▽＾)  嘿嘿。 复习了访问控制和密码学，虽然忘了一些但看书看一会儿就想起来了。 然后看了web框架安全。主要讲了mvc框架（模型m，视图v，控制器c）的安全。简单来说就是”在正确的地方做正确的事”  。 举几个例子： 1.在对页面进行渲染的view层可以选择框架提供的编码方法但如果全部使用同一种编码方法很可能被攻击者绕过。所以可以根据是否有细分场景的不同编码方式">
+<meta name="twitter:description" content="好久没更博了到处混吃混喝 (。＾▽＾)  嘿嘿。 复习了访问控制和密码学，虽然忘了一些但看书看一会儿就想起来了。 然后看了web框架安全。主要讲了mvc框架（模型m，视图v，控制器c）的安全。简单来说就是&amp;quot;在正确的地方做正确的事&amp;quot;  。 举几个例子： 1.在对页面进行渲染的view层可以选择框架提供的编码方法但如果全部使用同一种编码方法很可能被攻击者绕过。所以可以根据是否有细分">
 
 
 
@@ -310,8 +310,17 @@
       
 
       
-        <p> 好久没更博了<del>到处混吃混喝</del> (。＾▽＾)  嘿嘿。<br><br> 复习了访问控制和密码学，虽然忘了一些但看书看一会儿就想起来了。<br> 然后看了web框架安全。主要讲了mvc框架（模型m，视图v，控制器c）的安全。简单来说就是”在正确的地方做正确的事”  。<br> 举几个例子：<br> 1.在对页面进行渲染的view层可以选择框架提供的编码方法但如果全部使用同一种编码方法很可能被攻击者绕过。所以可以根据是否有细分场景的不同编码方式来判断安全方案是否完整。<br> 2.在对抗csrf时，web框架可使用token（随机数）解决问题。http post请求主要用来处理写操作（增删改），而post不足以对抗csrf。<br> 3.http返回头为了防止crlf注入攻击可以设置限制目的地址。<br> 4.使用orm框架针对sql注入攻击。<br> 5.一些框架自身的bug<br> <a id="more"></a> </p>
-<p> <a href="https://y.qq.com/n/yqq/song/0022QuVR1LcRHN.html" target="_blank" rel="external">后来的我们</a>。 </p>
+        <p>好久没更博了<s>到处混吃混喝</s> (。＾▽＾)  嘿嘿。<br><br>
+复习了访问控制和密码学，虽然忘了一些但看书看一会儿就想起来了。<br>
+然后看了web框架安全。主要讲了mvc框架（模型m，视图v，控制器c）的安全。简单来说就是&quot;在正确的地方做正确的事&quot;  。<br>
+举几个例子：<br>
+1.在对页面进行渲染的view层可以选择框架提供的编码方法但如果全部使用同一种编码方法很可能被攻击者绕过。所以可以根据是否有细分场景的不同编码方式来判断安全方案是否完整。<br>
+2.在对抗csrf时，web框架可使用token（随机数）解决问题。http post请求主要用来处理写操作（增删改），而post不足以对抗csrf。<br>
+3.http返回头为了防止crlf注入攻击可以设置限制目的地址。<br>
+4.使用orm框架针对sql注入攻击。<br>
+5.一些框架自身的bug</p>
+ <a id="more"></a> 
+<p><a href="https://y.qq.com/n/yqq/song/0022QuVR1LcRHN.html" target="_blank" rel="external">后来的我们</a>。</p>
 
       
     </div>
@@ -426,7 +435,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

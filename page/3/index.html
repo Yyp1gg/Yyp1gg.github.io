@@ -239,6 +239,137 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/07/17-11-6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="1Yy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ozajykkro.bkt.clouddn.com/69c1dcbbly1fjepkwst9zj20xc0xdn0i.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A funny p1g">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/07/17-11-6/" itemprop="url">了无心愿</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-07T01:13:01+08:00">
+                2017-11-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>今天学习了XSS的防御法则。<br></p>
+<ul>
+<li>XSS的防御的复杂的。主要有三个基础方法：httponly,标签白名单，对字符的编码或转义。<br>
+1.httponly:在set-cookie时添加httponly标记，将cookike与客户端ip绑定。但可以通过盗取IP，模拟IP破解。<br>
+2.标签白名单：用户输入数据（富文本等）时只对一些简单无危害的标签通过。但存在一些敏感字符，筛选后会改变本来意图。<br>
+3.字符的编码或转义：在输出到HTML时，对一些可能出现XSS的标签做编码或转义。在不同的场合分别使用HTMLENCODE或者JSENCODE。有时候需要分别使用这两个编码，比如在对付DOM XSS时。</li>
+<li>xss漏洞虽然复杂种类繁多，但是可以彻底解决。在不同场合使用不同方法，方法之间相互配合。<br></li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/07/17-11-6/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/06/17-11-5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -309,9 +440,13 @@
 
       
         
-          <p>学习XSS中..有点飘<br></p>
+          <p>学习XSS中…有点飘<br></p>
 <ul>
-<li>今天快速的看完了XSS的进攻内容。在昨天的内容后又讲了：XSS蠕虫，FalshXSS等更为厉害的攻击方式。<br>在攻击中，攻击者需要得到可用的JS这就需要用到一些调试工具，比如：firebug等。还需要一些XSS构造技巧：利用字符编码可以逃过编码搜索，绕过长度限制，利用BASE标签（相对路径）等。<br>一些成熟的JS开发框架也有XSS漏洞。DOJO，YUI,JQ都存在。<br>明天开始看防御部分，后天可能会看一些视频。<br>
+<li>今天快速的看完了XSS的进攻内容。在昨天的内容后又讲了：XSS蠕虫，FalshXSS等更为厉害的攻击方式。<br>
+在攻击中，攻击者需要得到可用的JS这就需要用到一些调试工具，比如：firebug等。还需要一些XSS构造技巧：利用字符编码可以逃过编码搜索，绕过长度限制，利用BASE标签（相对路径）等。<br>
+一些成熟的JS开发框架也有XSS漏洞。DOJO，YUI,JQ都存在。<br>
+明天开始看防御部分，后天可能会看一些视频。<br></li>
+</ul>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/11/06/17-11-5/#more" rel="contents">
@@ -438,7 +573,8 @@
           <p>今天开始学习XSS。<br></p>
 <ul>
 <li>1.XSS：通过“HTML注入”篡改网页，插入恶意脚本，从而控制用户浏览器。根据效果分为：1.反射XSS（非持久）：把用户（往往是黑客）输入反射给浏览器 2.存储型xss（持久）：把用户输入的数据储存在服务器，等待其他用户（往往不知情）访问 3.DOM XSS（可以划分在1）：修改DOM（标签等）形成XSS。</li>
-<li>2.XSS playload:低级cookike劫持，但是很容易防御，比如与客户端IP绑定。高级的有：get与post请求：得到想要的ID，钓鱼，识别浏览器：alter(navigator.userAgent)等，识别用户安装的软件：每个软件相对的ACTIVEX控件都有唯一ID、或者通过识别图标来确定，通过JAVAapplet接口获取本地IP。<br>
+<li>2.XSS playload:低级cookike劫持，但是很容易防御，比如与客户端IP绑定。高级的有：get与post请求：得到想要的ID，钓鱼，识别浏览器：alter(navigator.userAgent)等，识别用户安装的软件：每个软件相对的ACTIVEX控件都有唯一ID、或者通过识别图标来确定，通过JAVAapplet接口获取本地IP。<br></li>
+</ul>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/11/04/17-11-4/#more" rel="contents">
@@ -564,7 +700,14 @@
         
           
             <p>一个温暖的深秋午后，心中亦充满着应景的希望。<br></p>
-<h3 id="“好奇心与求知欲是他们前进的动力”-我也是"><a href="#“好奇心与求知欲是他们前进的动力”-我也是" class="headerlink" title="“好奇心与求知欲是他们前进的动力”  我也是"></a>“好奇心与求知欲是他们前进的动力”  我也是</h3><p>“威胁分析的STRIDE原则:Spoofing(伪装),tampering(篡改),Repudiation(抵赖),Infor Disclosure(信息泄露),Denial of Service(拒绝服务),Elevation of Privilege(权限up)”<br>“风险评估的DREAD原则:Damage Potential(威胁等级),Reproducibility(多次性),Exploitability(开发性),Affected users(用户影响),Discoverability(可发现性).Value at Risk:12~15(high),8~11(mid),0~7(low)”<br>“安全方案的原则:Secure by Default(黑白名单)-方案的总则,Defense in Depth(纵深防御)-应该全面和根本地看问题,数据与代码分离-漏洞的本质原因,不可预测性(DEP的否认,ASLR的随机性,复杂的token值)-克服被攻击”<br>用<code>没有银弹</code>作题目真是太贴切了。<br><br>今日份的歌曲是:<a href="https://y.qq.com/n/yqq/song/0018Xoix1h4KpV.html" target="_blank" rel="external">泡沫花火</a>。 下一个季节将会到来。<br>该吃晚饭啦，晚上就可以农药了，开熏。<br>今天没有晚安&gt;。&lt;</p>
+<h3 id="好奇心与求知欲是他们前进的动力-我也是"><a class="header-anchor" href="#好奇心与求知欲是他们前进的动力-我也是">¶</a>“好奇心与求知欲是他们前进的动力”  我也是</h3>
+<p>“威胁分析的STRIDE原则:Spoofing(伪装),tampering(篡改),Repudiation(抵赖),Infor Disclosure(信息泄露),Denial of Service(拒绝服务),Elevation of Privilege(权限up)”<br>
+“风险评估的DREAD原则:Damage Potential(威胁等级),Reproducibility(多次性),Exploitability(开发性),Affected users(用户影响),Discoverability(可发现性).Value at Risk:12<sub>15(high),8</sub>11(mid),0~7(low)”<br>
+&quot;安全方案的原则:Secure by Default(黑白名单)-方案的总则,Defense in Depth(纵深防御)-应该全面和根本地看问题,数据与代码分离-漏洞的本质原因,不可预测性(DEP的否认,ASLR的随机性,复杂的token值)-克服被攻击&quot;<br>
+用<code>没有银弹</code>作题目真是太贴切了。<br><br>
+今日份的歌曲是:<a href="https://y.qq.com/n/yqq/song/0018Xoix1h4KpV.html" target="_blank" rel="external">泡沫花火</a>。 下一个季节将会到来。<br>
+该吃晚饭啦，晚上就可以农药了，开熏。<br>
+今天没有晚安&gt;。&lt;</p>
 
           
         
@@ -684,7 +827,11 @@
       
         
           
-            <p>这是第二次提交..刚刚用了一个非常阔爱的颜文字（不是UTF-8里的编码）所以崩了，以后我一定会解决的！哼MD（以下为原内容）<br><br>今天弄了好久的主题美化，嗯..也看不出来，简单就好。添加了一个访客记录，<del>偷看的话会被本小爷发现的哦！</del><br>明天开始做一个技术博，目标是成为菜鸡和小葱（的跟班）233<br><br>emm..Today’s song is <a href="https://y.qq.com/n/yqq/song/003U7jQQ02YVAv.html" target="_blank" rel="external">记得</a> .Sweet past in  heart ,but no future in eye.<br>Good night~</p>
+            <p>这是第二次提交…刚刚用了一个非常阔爱的颜文字（不是UTF-8里的编码）所以崩了，以后我一定会解决的！哼MD（以下为原内容）<br><br>
+今天弄了好久的主题美化，嗯…也看不出来，简单就好。添加了一个访客记录，<s>偷看的话会被本小爷发现的哦！</s><br>
+明天开始做一个技术博，目标是成为菜鸡和小葱（的跟班）233<br><br>
+emm…Today’s song is <a href="https://y.qq.com/n/yqq/song/003U7jQQ02YVAv.html" target="_blank" rel="external">记得</a> .Sweet past in  heart ,but no future in eye.<br>
+Good night~</p>
 
           
         
@@ -805,13 +952,18 @@
         
           
             <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<h2 id="quick-start"><a class="header-anchor" href="#quick-start">¶</a>Quick Start</h2>
+<h3 id="create-a-new-post"><a class="header-anchor" href="#create-a-new-post">¶</a>Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="run-server"><a class="header-anchor" href="#run-server">¶</a>Run server</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="generate-static-files"><a class="header-anchor" href="#generate-static-files">¶</a>Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="deploy-to-remote-sites"><a class="header-anchor" href="#deploy-to-remote-sites">¶</a>Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 
           
@@ -933,7 +1085,8 @@
         
           
             <p>算是第一条博文（想到了情歌王233）</p>
-<h1 id="A-song-for-myself：追梦赤子心"><a href="#A-song-for-myself：追梦赤子心" class="headerlink" title="A song for myself：追梦赤子心"></a>A song for myself：<a href="https://y.qq.com/n/yqq/song/000snfVJ2YNgrC.html" target="_blank" rel="external">追梦赤子心</a></h1><p>good night.</p>
+<h1>A song for myself：<a href="https://y.qq.com/n/yqq/song/000snfVJ2YNgrC.html" target="_blank" rel="external">追梦赤子心</a></h1>
+<p>good night.</p>
 
           
         
@@ -1023,7 +1176,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

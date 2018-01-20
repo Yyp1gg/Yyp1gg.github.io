@@ -239,6 +239,143 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/15/17-12-15-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="1Yy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ozajykkro.bkt.clouddn.com/69c1dcbbly1fjepkwst9zj20xc0xdn0i.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A funny p1g">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/15/17-12-15-2/" itemprop="url">愿时光没有磨平我的麟角</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-15T16:51:26+08:00">
+                2017-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>也算可以专心做事了,可不能给自己丢脸啊。Be stronger.<br><br>
+昨天看了拒绝服务攻击ddos。ddos攻击的本质是对有限资源的无限滥用，利用合理的请求造成资源过载，导致服务器崩溃服务不可用。常见的ddos攻击有syn flood，udp flood，icmp flood等。syn最常见，这是因为它利用了tcp三次握手设计的缺陷。<br>
+应用层ddos是发生在三次握手已经完成环境下，发起攻击的ip都是真实的。应用层ddos攻击与防御方法如下：<br>
+1.限制请求频率。通过ip地址和cookie定位一个客户端，若该客户端在一定时间内请求过于频繁则对之后的请求冲顶想到一个出错页面。可以通过大量代理服务器不断更换ip攻击服务器。雅虎提供过一个算法判断客户端的请求频率。<br>
+2.验证码。提前将验证码图片生成好，以哈希过的字符串作为验证码图片的文件名，并且文件名需要随机化防止通过彩虹表建立验证码与明文的对应关系。<br>
+3.修改配置参数以缓解ddos攻击。如调小timeout，增加maxclient等。<br>
+4.让客户端解析js文件或flash文件以判断客户端是不是浏览器。<br>
+利用服务器的漏洞或设计缺陷直接造成ddos。<br>
+1.slowlories攻击。恶意占用有限的链接不释放（有限资源的无限滥用），在http头中只有一个换行符\r\n（正常有俩），服务器就会等待第二个换行符。这时只要再发送任意http头就可以保持链接。今天依然有效。<br>
+2.http post dos。发送post包时，指定一个很大的content-length值并以很低的速度发送，保持链接不断开。在连接数多了以后就会造成ddos。<br>
+3.server limit dos。http包头超出限制。比如通过xss写入一个超长的cookie，在刷新页面时会发送包涵这个cookie的http头，服务器会因为超长拒绝请求，从而导致ddos。<br>
+还有就是正则表达式会引发ddos。如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^(a+)+$</span><br></pre></td></tr></table></figure>
+<p>在输入4个a时会遍历16次，但输入输入16个a时会遍历65536次。当用户恶意构造输入时，会大量消耗cpu和内存资源。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/12/15/17-12-15-2/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/15/17-12-15/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -310,7 +447,12 @@
       
         
           
-            <p>恍恍惚惚看了一部电影。<br>前半小时是纯爱片，牙都会甜掉那种。<br>可谁知镜头一转，后来一个小时变成了推理悬疑片，风格是阴冷又灰暗，看得通透的地方还没几处，但偶尔也可以发现几条指向以后的伏笔。<br>本以为在最后会填完坑来个首尾呼应皆大欢喜拍23456部的时候，却活生生整成了喜剧片。让人笑着哭又哭着笑，笑是从心里的笑，哭是从心里的哭。<br>仓惶收尾，连演员是谁都不知道。<br>电影的名字是《南山旧事》，拍完就禁播了，也不会有续集了。</p>
+            <p>恍恍惚惚看了一部电影。<br>
+前半小时是纯爱片，牙都会甜掉那种。<br>
+可谁知镜头一转，后来一个小时变成了推理悬疑片，风格是阴冷又灰暗，看得通透的地方还没几处，但偶尔也可以发现几条指向以后的伏笔。<br>
+本以为在最后会填完坑来个首尾呼应皆大欢喜拍23456部的时候，却活生生整成了喜剧片。让人笑着哭又哭着笑，笑是从心里的笑，哭是从心里的哭。<br>
+仓惶收尾，连演员是谁都不知道。<br>
+电影的名字是《南山旧事》，拍完就禁播了，也不会有续集了。</p>
 
           
         
@@ -429,7 +571,15 @@
 
       
         
-          <p> 好久没更博了<del>到处混吃混喝</del> (。＾▽＾)  嘿嘿。<br><br> 复习了访问控制和密码学，虽然忘了一些但看书看一会儿就想起来了。<br> 然后看了web框架安全。主要讲了mvc框架（模型m，视图v，控制器c）的安全。简单来说就是”在正确的地方做正确的事”  。<br> 举几个例子：<br> 1.在对页面进行渲染的view层可以选择框架提供的编码方法但如果全部使用同一种编码方法很可能被攻击者绕过。所以可以根据是否有细分场景的不同编码方式来判断安全方案是否完整。<br> 2.在对抗csrf时，web框架可使用token（随机数）解决问题。http post请求主要用来处理写操作（增删改），而post不足以对抗csrf。<br> 3.http返回头为了防止crlf注入攻击可以设置限制目的地址。<br> 4.使用orm框架针对sql注入攻击。<br> 5.一些框架自身的bug<br>
+          <p>好久没更博了<s>到处混吃混喝</s> (。＾▽＾)  嘿嘿。<br><br>
+复习了访问控制和密码学，虽然忘了一些但看书看一会儿就想起来了。<br>
+然后看了web框架安全。主要讲了mvc框架（模型m，视图v，控制器c）的安全。简单来说就是&quot;在正确的地方做正确的事&quot;  。<br>
+举几个例子：<br>
+1.在对页面进行渲染的view层可以选择框架提供的编码方法但如果全部使用同一种编码方法很可能被攻击者绕过。所以可以根据是否有细分场景的不同编码方式来判断安全方案是否完整。<br>
+2.在对抗csrf时，web框架可使用token（随机数）解决问题。http post请求主要用来处理写操作（增删改），而post不足以对抗csrf。<br>
+3.http返回头为了防止crlf注入攻击可以设置限制目的地址。<br>
+4.使用orm框架针对sql注入攻击。<br>
+5.一些框架自身的bug</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/12/10/17-12-13/#more" rel="contents">
@@ -553,11 +703,24 @@
 
       
         
-          <p> 下午早些看了另一个简单的注入技巧：进行UNION联合操作，通过报错来知道正确的数据库信息<a href="http://www.jb51.net/hack/200734.html" target="_blank" rel="external">链接</a>。<br> 今天看的是书上文件上传漏洞的内容。</p>
+          <p>下午早些看了另一个简单的注入技巧：进行UNION联合操作，通过报错来知道正确的数据库信息<a href="http://www.jb51.net/hack/200734.html" target="_blank" rel="external">链接</a>。<br>
+今天看的是书上文件上传漏洞的内容。</p>
 <ul>
 <li>文件上传本身没有问题，但若用户上传了一个可执行的脚本并通过此脚本执行了服务器端命令的功能，这就是文件上传攻击。文件上传要满足3个条件：1.文件要被Web容器解释执行。 2.用户能够访问到此文件。 3.不能在上传时被修改。</li>
-<li>可以通过：<br>1.修改后缀名避免黑名单筛选。<br>2.截断字符0x00。xxx.php[\0].jpg会被某些函数判断为xxx.php。<br>3.伪造文件头，将真实的文件附在合法的文件头后。正常情况判断前10个字节就可以判断真实类型。<br>4.利用apache中不认识的后缀名。（修复）<br>5.利用IIS中;（截断字符） 。<br>6.若有上传权限同时开启webdav(脚本资源访问)。可以用put上传文本文件后用move方法改写为脚本文件，从而执行webshell。<br>7.钓鱼。先将文件上传到目标网站，再传播合法url。</li>
-<li>防御：<br>1.上传的文件设置为不可执行。例如先做静态处理。<br>2.判断文件类型。使用白名单。<br>3.设置权限和随机数。最小权限原则和随机数能极大增加攻击成本。<br>4.单独设置文件服务器的域名。起到隐藏作用。
+<li>可以通过：<br>
+1.修改后缀名避免黑名单筛选。<br>
+2.截断字符0x00。xxx.php[\0].jpg会被某些函数判断为xxx.php。<br>
+3.伪造文件头，将真实的文件附在合法的文件头后。正常情况判断前10个字节就可以判断真实类型。<br>
+4.利用apache中不认识的后缀名。（修复）<br>
+5.利用IIS中;（截断字符） 。<br>
+6.若有上传权限同时开启webdav(脚本资源访问)。可以用put上传文本文件后用move方法改写为脚本文件，从而执行webshell。<br>
+7.钓鱼。先将文件上传到目标网站，再传播合法url。</li>
+<li>防御：<br>
+1.上传的文件设置为不可执行。例如先做静态处理。<br>
+2.判断文件类型。使用白名单。<br>
+3.设置权限和随机数。最小权限原则和随机数能极大增加攻击成本。<br>
+4.单独设置文件服务器的域名。起到隐藏作用。</li>
+</ul>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/11/26/17-11-16/#more" rel="contents">
@@ -681,7 +844,7 @@
 
       
         
-          <p>最开始认识孙亚龙因为他是we的对手，反向大招的琴女，被冯卓君按在地上摩擦。凭借规则优势去了上海全明星，在红方下外塔和蓝方上二塔那两次q，是他的游戏巅峰。之后他退出了游戏没有再重连，不卖肉松饼是一个承诺。他去做了主播一边还做着解说，靠运气碰到了黑暗之光零封白盾的比赛，疯狂输出后拿到元年的第一解说。<br>
+          <p>最开始认识孙亚龙因为他是we的对手，反向大招的琴女，被冯卓君按在地上摩擦。凭借规则优势去了上海全明星，在红方下外塔和蓝方上二塔那两次q，是他的游戏巅峰。之后他退出了游戏没有再重连，不卖肉松饼是一个承诺。他去做了主播一边还做着解说，靠运气碰到了黑暗之光零封白盾的比赛，疯狂输出后拿到元年的第一解说。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/11/23/17-11-23/#more" rel="contents">
@@ -807,9 +970,27 @@
         
           <p>循着小葱的建议开始看服务器端的知识。<br></p>
 <ul>
-<li><p>注入攻击的本质：1.能够用户控制输入 2.原来执行的代码拼接了用户的输入。判断sql漏洞是否存在往往需要使用盲注的技巧（一种猜测），通过真假条件语句判断是否可以注入，通常还需猜测参数是否被单引号包围。然后使用一次次的条件语句可以判断出数据库表名，<br>用户字段名，用户密码长度和具体密码等。<br>$ and 1=2 and ‘a’=’a’ //构造注入，若页面返回错误则进行真值判断<br>$ and 1=1 and ‘a’=’a’ //若页面返回成功说明存在漏洞<br>$ and (select count(<em>) from data)&gt;0 and ‘a’=’a //猜测表名是否是data，可反复测试。若成功返回值&gt;1<br>$ (select count(uname) from data)&gt;0 //猜测用户字段为uname。同理猜测密码字段等信息。<br>$ Select count(</em>) from data where uname=’p1ggy’ and len(upass)&gt;1)&gt;0 //猜测密码字段长度。修改len(upass)得到准确的值。<br>$ (Select count(<em>) from data where uname=’p1ggy’ and mid(upass,1,1)&lt;=’9’)&gt;0 //猜测第一位密码是否为数字。把upass的第一个字符提出来。确定字母还是数字后缩小范围。<br>$ (Select count(</em>) from data where uname=’p1ggy’ and mid(upass,1,1)&gt;=’a’)&gt;0 //猜测第一位密码是否为字母。<br>sql注入攻击主要依赖数据库的攻击，所以数据库攻击技巧十分重要。</p>
+<li>
+<p>注入攻击的本质：1.能够用户控制输入 2.原来执行的代码拼接了用户的输入。判断sql漏洞是否存在往往需要使用盲注的技巧（一种猜测），通过真假条件语句判断是否可以注入，通常还需猜测参数是否被单引号包围。然后使用一次次的条件语句可以判断出数据库表名，<br>
+用户字段名，用户密码长度和具体密码等。<br>
+$ and 1=2 and ‘a’=‘a’ //构造注入，若页面返回错误则进行真值判断<br>
+$ and 1=1 and ‘a’=‘a’ //若页面返回成功说明存在漏洞<br>
+$ and (select count(<em>) from data)&gt;0 and ‘a’='a //猜测表名是否是data，可反复测试。若成功返回值&gt;1<br>
+$ (select count(uname) from data)&gt;0 //猜测用户字段为uname。同理猜测密码字段等信息。<br>
+$ Select count(</em>) from data where uname=‘p1ggy’ and len(upass)&gt;1)&gt;0 //猜测密码字段长度。修改len(upass)得到准确的值。<br>
+$ (Select count(<em>) from data where uname=‘p1ggy’ and mid(upass,1,1)&lt;=‘9’)&gt;0 //猜测第一位密码是否为数字。把upass的第一个字符提出来。确定字母还是数字后缩小范围。<br>
+$ (Select count(</em>) from data where uname=‘p1ggy’ and mid(upass,1,1)&gt;=‘a’)&gt;0 //猜测第一位密码是否为字母。<br>
+sql注入攻击主要依赖数据库的攻击，所以数据库攻击技巧十分重要。</p>
 </li>
-<li><p>数据库攻击技巧。<br>1.自动化注入工具可以帮助完成上述步骤<br>2.修改系统文件时可用load_file(),into dumpfile,load data infile.<br>3.加载用户自定义函数UDF执行命令。<br>4.在存储过程（功能类似udf）执行系统命令。有xp_cmdshell执行系统命令,xp_regread操作注册表等<br>5.超长值。strict_all_table，开启时输入长度超过限制会error，关闭时只有warning。当关闭时超长数据会插入成功，使用超长数据作为用户名可能会造成越权访问。选择时admin（55个空格）x等于admin。</p>
+<li>
+<p>数据库攻击技巧。<br>
+1.自动化注入工具可以帮助完成上述步骤<br>
+2.修改系统文件时可用load_file(),into dumpfile,load data infile.<br>
+3.加载用户自定义函数UDF执行命令。<br>
+4.在存储过程（功能类似udf）执行系统命令。有xp_cmdshell执行系统命令,xp_regread操作注册表等<br>
+5.超长值。strict_all_table，开启时输入长度超过限制会error，关闭时只有warning。当关闭时超长数据会插入成功，使用超长数据作为用户名可能会造成越权访问。选择时admin（55个空格）x等于admin。</p>
+</li>
+</ul>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/11/17/17-11-17/#more" rel="contents">
@@ -935,8 +1116,13 @@
         
           <p>呵呵？？？？？？？？<br></p>
 <ul>
-<li>csrf（跨站点请求伪造）：某个请求是攻击者伪造的，诱导用户进入陷阱。csrf需要通过服务器验证才能生效，这就需要使用cookie,cookie又分为临时和本地的，在IE和Safari不允许不同域获取本地cookie（第三方）而火狐谷歌则允许不同域获取本地cookie（第三方）。<br>也就是在IE或Safari中，www.b.com若想用csrf攻击www.a.com时a上set-cookie不会成功传所以传不到b去导致攻击无法成功，而在火狐谷歌则会成功。但若使用p3p头，所有浏览器都不会拦截第三方cookie的发送。<br>csrf的防御:1.验证码，让伪造的攻击被用户察觉，最简单有效。2.来源检查，服务器只对确定来源的请求开放。3.加密，csrf的重要操作都是可以被攻击者猜测到的，所以在用户和服务器约定一个公钥是一个解决办法，任何请求都需验证密钥。通常采用token值，真随机。</li>
-<li>点击劫持：让用户点击透明或者伪造的iframe（诱导用户和页面产生交互行为）。点击劫持和csrf都是在用户不知情的情况下完成攻击。<br>分为：1.falsh点击劫持，一个falsh游戏一步一步诱导用户进入陷阱。2.图片覆盖攻击（xsio），在重要的图片或信息上建立攻击用iframe。3.拖拽劫持与数据窃取，因拖拽流行，原理类似falsh劫持来完成数据窃取。4.触屏劫持，利用手机上的一些视觉效果比如在原来的搜索框隐藏时伪造搜索框。<br>点击劫持的防御：frame busting。原理：请求地址和地址栏的地址是否相同。<br>
+<li>csrf（跨站点请求伪造）：某个请求是攻击者伪造的，诱导用户进入陷阱。csrf需要通过服务器验证才能生效，这就需要使用cookie,cookie又分为临时和本地的，在IE和Safari不允许不同域获取本地cookie（第三方）而火狐谷歌则允许不同域获取本地cookie（第三方）。<br>
+也就是在IE或Safari中，www.b.com若想用csrf攻击www.a.com时a上set-cookie不会成功传所以传不到b去导致攻击无法成功，而在火狐谷歌则会成功。但若使用p3p头，所有浏览器都不会拦截第三方cookie的发送。<br>
+csrf的防御:1.验证码，让伪造的攻击被用户察觉，最简单有效。2.来源检查，服务器只对确定来源的请求开放。3.加密，csrf的重要操作都是可以被攻击者猜测到的，所以在用户和服务器约定一个公钥是一个解决办法，任何请求都需验证密钥。通常采用token值，真随机。</li>
+<li>点击劫持：让用户点击透明或者伪造的iframe（诱导用户和页面产生交互行为）。点击劫持和csrf都是在用户不知情的情况下完成攻击。<br>
+分为：1.falsh点击劫持，一个falsh游戏一步一步诱导用户进入陷阱。2.图片覆盖攻击（xsio），在重要的图片或信息上建立攻击用iframe。3.拖拽劫持与数据窃取，因拖拽流行，原理类似falsh劫持来完成数据窃取。4.触屏劫持，利用手机上的一些视觉效果比如在原来的搜索框隐藏时伪造搜索框。<br>
+点击劫持的防御：frame busting。原理：请求地址和地址栏的地址是否相同。<br></li>
+</ul>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/11/16/17-11-16-2/#more" rel="contents">
@@ -1182,7 +1368,11 @@
         
           <p>没有去确认报名，这7个月的时间当是给大一还债。好好学安全并且准备4月的考试，keep moving。<br></p>
 <ul>
-<li>绕过XSS检测。1.安全狗 2.xss-Filter：过滤白黑名单字符 3.长度限制<br>XSS构造目标是绕过检测。1.编码或者大小写，使用编码工具 2.在长度有限时把XSS写到别处或者注释掉限制框 3.拆分跨站 4.出错时使用onerror调用js脚本<br>shellcode调用就是调用外部的js脚本，可以使用payload搭建平台。因为放在外部简单，可以避免一些检测。攻击成功后，获得的信息（cookie，ip，剪切板等）反馈到在平台上。<br>cookie劫持：算法生成独一无二的cookie，分为session cookie，临时和3rd-party cookie，长时间。可以使用http only防御，原理是cookie只能在http标签传输不能再在js里传输。<br>
+<li>绕过XSS检测。1.安全狗 2.xss-Filter：过滤白黑名单字符 3.长度限制<br>
+XSS构造目标是绕过检测。1.编码或者大小写，使用编码工具 2.在长度有限时把XSS写到别处或者注释掉限制框 3.拆分跨站 4.出错时使用onerror调用js脚本<br>
+shellcode调用就是调用外部的js脚本，可以使用payload搭建平台。因为放在外部简单，可以避免一些检测。攻击成功后，获得的信息（cookie，ip，剪切板等）反馈到在平台上。<br>
+cookie劫持：算法生成独一无二的cookie，分为session cookie，临时和3rd-party cookie，长时间。可以使用http only防御，原理是cookie只能在http标签传输不能再在js里传输。<br></li>
+</ul>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/11/13/17-11-12/#more" rel="contents">
@@ -1308,137 +1498,13 @@
         
           <p>这两天内发生了很多事情。世事无常，珍惜眼前你所爱的人。<br></p>
 <ul>
-<li>XSS漏洞里的反射型可以被几乎所有浏览器截获。反射型可以在url后或者任何富文本框中尝试，这种方法称为盲打。还可以用扫描器扫描网站是否存在漏洞，比如WVS，UNIWASS扫描器等。<br>储存型XSS可以通过搭建平台，创建paylaod(获取方法)获取信息。<br>明天接着学习简单绕过xss，shellcode调用等。计划15号开始学SQL，CSRF吧。顺利的话，12月开始学渗透。<br>
+<li>XSS漏洞里的反射型可以被几乎所有浏览器截获。反射型可以在url后或者任何富文本框中尝试，这种方法称为盲打。还可以用扫描器扫描网站是否存在漏洞，比如WVS，UNIWASS扫描器等。<br>
+储存型XSS可以通过搭建平台，创建paylaod(获取方法)获取信息。<br>
+明天接着学习简单绕过xss，shellcode调用等。计划15号开始学SQL，CSRF吧。顺利的话，12月开始学渗透。<br></li>
+</ul>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/11/12/17-11-11/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/07/17-11-6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="1Yy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ozajykkro.bkt.clouddn.com/69c1dcbbly1fjepkwst9zj20xc0xdn0i.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="A funny p1g">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/07/17-11-6/" itemprop="url">了无心愿</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-07T01:13:01+08:00">
-                2017-11-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>今天学习了XSS的防御法则。<br></p>
-<ul>
-<li>XSS的防御的复杂的。主要有三个基础方法：httponly,标签白名单，对字符的编码或转义。<br>1.httponly:在set-cookie时添加httponly标记，将cookike与客户端ip绑定。但可以通过盗取IP，模拟IP破解。<br>2.标签白名单：用户输入数据（富文本等）时只对一些简单无危害的标签通过。但存在一些敏感字符，筛选后会改变本来意图。<br>3.字符的编码或转义：在输出到HTML时，对一些可能出现XSS的标签做编码或转义。在不同的场合分别使用HTMLENCODE或者JSENCODE。有时候需要分别使用这两个编码，比如在对付DOM XSS时。</li>
-<li>xss漏洞虽然复杂种类繁多，但是可以彻底解决。在不同场合使用不同方法，方法之间相互配合。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/11/07/17-11-6/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1530,7 +1596,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
