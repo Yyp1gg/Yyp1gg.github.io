@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="A funny p1g">
 <meta property="og:description" content="13号补笔记…5章的内容… 第五章——sql注入漏洞。 一.sql注入漏洞的原因是用户输入的数据被SQL解释其执行。以前的笔记：  注入攻击的本质：1.能够用户控制输入。 2.原来执行的代码拼接了用户的输入。 利用注入漏洞的目的就是绕过程序限制，使用户输入的数据带入数据库，利用数据库获得更大的权限或者更多信息。可以归为查询数据、读写文件、执行命令。 常见注入漏洞可以分为数字型注入和字符型注入。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-11-28T05:25:37.758Z">
+<meta property="og:updated_time" content="2018-11-28T09:30:31.696Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="a mouth">
 <meta name="twitter:description" content="13号补笔记…5章的内容… 第五章——sql注入漏洞。 一.sql注入漏洞的原因是用户输入的数据被SQL解释其执行。以前的笔记：  注入攻击的本质：1.能够用户控制输入。 2.原来执行的代码拼接了用户的输入。 利用注入漏洞的目的就是绕过程序限制，使用户输入的数据带入数据库，利用数据库获得更大的权限或者更多信息。可以归为查询数据、读写文件、执行命令。 常见注入漏洞可以分为数字型注入和字符型注入。">
@@ -328,8 +328,8 @@
 sql server是微软开发，用在大型数据库的数据库管理系统。<br>
 1).利用错误回显提取信息。<br>
 1.枚举当前表及列<br>
-<code>select * from users where username='*root*' and password='*root' having 1=1--*'</code><br>
-报错：user.id无效，没有包含在聚合函数或者gruop by子句中。继续构造：</p>
+<code>select from users where username='root' and password='root' having 1=1--'</code><br>
+报错：user.id无效，没有包含在聚合函数或者gruop by子句中。* 继续构造 ：</p>
 <p><code>select * from users where username='*root*' and password='*root' gruop by user.id having 1=1--*'</code><br>
 报错：user.username无效。循环，直到查询出所有列名。<br>
 2.利用数据类型错误提取数据。<br>
@@ -518,7 +518,7 @@ mysql是一个创业的小青年，只能运行中小型数据库。<br>
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
