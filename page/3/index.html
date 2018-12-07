@@ -239,6 +239,147 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/26/17-11-16/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="1Yy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ozajykkro.bkt.clouddn.com/69c1dcbbly1fjepkwst9zj20xc0xdn0i.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A funny p1g">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/26/17-11-16/" itemprop="url">烧烤夜</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-26T16:15:58+08:00">
+                2017-11-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>下午早些看了另一个简单的注入技巧：进行UNION联合操作，通过报错来知道正确的数据库信息<a href="http://www.jb51.net/hack/200734.html" target="_blank" rel="external">链接</a>。<br>
+今天看的是书上文件上传漏洞的内容。</p>
+<ul>
+<li>文件上传本身没有问题，但若用户上传了一个可执行的脚本并通过此脚本执行了服务器端命令的功能，这就是文件上传攻击。文件上传要满足3个条件：1.文件要被Web容器解释执行。 2.用户能够访问到此文件。 3.不能在上传时被修改。</li>
+<li>可以通过：<br>
+1.修改后缀名避免黑名单筛选。<br>
+2.截断字符0x00。xxx.php[\0].jpg会被某些函数判断为xxx.php。<br>
+3.伪造文件头，将真实的文件附在合法的文件头后。正常情况判断前10个字节就可以判断真实类型。<br>
+4.利用apache中不认识的后缀名。（修复）<br>
+5.利用IIS中;（截断字符） 。<br>
+6.若有上传权限同时开启webdav(脚本资源访问)。可以用put上传文本文件后用move方法改写为脚本文件，从而执行webshell。<br>
+7.钓鱼。先将文件上传到目标网站，再传播合法url。</li>
+<li>防御：<br>
+1.上传的文件设置为不可执行。例如先做静态处理。<br>
+2.判断文件类型。使用白名单。<br>
+3.设置权限和随机数。最小权限原则和随机数能极大增加攻击成本。<br>
+4.单独设置文件服务器的域名。起到隐藏作用。</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/26/17-11-16/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/23/17-11-23/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1396,134 +1537,6 @@ cookie劫持：算法生成独一无二的cookie，分为session cookie，临时
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/03/17-11-3-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="1Yy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ozajykkro.bkt.clouddn.com/69c1dcbbly1fjepkwst9zj20xc0xdn0i.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="A funny p1g">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/03/17-11-3-2/" itemprop="url">没有银弹</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-03T12:52:52+08:00">
-                2017-11-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>一个温暖的深秋午后，心中亦充满着应景的希望。<br></p>
-<h3 id="好奇心与求知欲是他们前进的动力-我也是"><a class="header-anchor" href="#好奇心与求知欲是他们前进的动力-我也是">¶</a>“好奇心与求知欲是他们前进的动力”  我也是</h3>
-<p>“威胁分析的STRIDE原则:Spoofing(伪装),tampering(篡改),Repudiation(抵赖),Infor Disclosure(信息泄露),Denial of Service(拒绝服务),Elevation of Privilege(权限up)”<br>
-“风险评估的DREAD原则:Damage Potential(威胁等级),Reproducibility(多次性),Exploitability(开发性),Affected users(用户影响),Discoverability(可发现性).Value at Risk:12<sub>15(high),8</sub>11(mid),0~7(low)”<br>
-&quot;安全方案的原则:Secure by Default(黑白名单)-方案的总则,Defense in Depth(纵深防御)-应该全面和根本地看问题,数据与代码分离-漏洞的本质原因,不可预测性(DEP的否认,ASLR的随机性,复杂的token值)-克服被攻击&quot;<br>
-用<code>没有银弹</code>作题目真是太贴切了。<br><br>
-今日份的歌曲是:<a href="https://y.qq.com/n/yqq/song/0018Xoix1h4KpV.html" target="_blank" rel="external">泡沫花火</a>。 下一个季节将会到来。<br>
-该吃晚饭啦，晚上就可以农药了，开熏。<br>
-今天没有晚安&gt;。&lt;</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1578,7 +1591,7 @@ cookie劫持：算法生成独一无二的cookie，分为session cookie，临时
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
