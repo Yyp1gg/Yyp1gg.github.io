@@ -239,6 +239,143 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/06/19-1-6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="1yy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ozajykkro.bkt.clouddn.com/69c1dcbbly1fjepkwst9zj20xc0xdn0i.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A funny p1g">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/06/19-1-6/" itemprop="url">挫败感</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-06T23:48:23+08:00">
+                2019-01-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>啊，感觉好难 。 坚持~~~<br><br>
+1.\u7f8a\u7531\u5927 是unicode编码<br>
+2.f5隐写  java Extract 123456.jpg -p 123456<br>
+3.看不懂格式的文件可以用notepad打开。<br>
+4.QR_Research可以查看二维码，jpg的用这个Jphswin，png用Image Steganography<br>
+5.linux安装的软件直接使用。<br>
+steghide的使用 解压图片的密码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">查看图片的信息：steghide info  1.jpg</span><br><span class="line">解压图片：steghide extract -sf 1.jpg</span><br></pre></td></tr></table></figure>
+<p>6.看配置文件  my.cnf</p>
+<ol start="7">
+<li></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> 引导扇区的信息如下：</span><br><span class="line">1.偏移地址00H，长度3，内容：EB 3C 90 跳转指令。</span><br><span class="line">2.偏移地址03H，长度8，内容：4D 53 44 4F 53 35 2E 30 为厂商标志和os 版本号，这里是MSDOS5.0。</span><br><span class="line">3.偏移地址0BH,长度2，内容：00 02。注意这里数据的布局，高地址放高字节，低地址放低字节（数据为小端格式组织），所以数据应该是0200，即512。表示的意思是，该磁盘每个扇区有512个字节。有的可能是1024、2048、4096。</span><br><span class="line">4.偏移地址0DH，长度1，内容：01。表示的意思是每个簇有1个扇区。这个值不能为0，而且必须是2的整数次方，比如1、2、4、8、16、32、64、128。但是这个值不能使每个簇超过32KB字节。</span><br><span class="line">5.偏移地址0EH，长度2，内容：08 00。转换一下，就是00 08，意思是保留区域中的保留扇区数为8个。那么就可以知道下面的FAT1区的开始的地址就是：0x08*0x200（每个扇区的字节数）=0x1000。</span><br><span class="line">6.偏移地址10H，长度1，内容：02。表示此卷中的FAT结构的份数为2，另外一个是备份的。</span><br><span class="line">7.偏移地址11H，长度2，内容：00 02。转换一下，就是0200H，表示根目录项数(Root Entries) 能够保存在该分区的根目录文件夹中的32个字节长的文件和文件夹名称项的总数。在一个典型的硬盘上，本字段的值为512。</span><br><span class="line">8.  偏移量地址13H，长度2，内容：4D ED。转换一下就是ED4DH，即大约32MB的SD卡存储量。表示小扇区数(Small Sector) 。该分区上的扇区数，表示为16位(&lt;65536)。对大于65536个扇区的分区来说，本字段的值为0，而使用大扇区数来取代它。</span><br><span class="line">9.偏移地址16H，长度2，内容：EC 00。转换一下为00EC，表示每个FAT占用的扇区数。那么每个扇区占用的字节数就是0x00EC*0x200=0x1D800。根据启动区、FAT1、FAT2、根目录、数据区的次序，可以依次计算出它们的地址了。(教程中给出的偏移地址为24H，但是根据实际的FAT1/FAT2地址的推算，应该是16H地址)</span><br><span class="line">10 偏移量地址20H，长度2，内容：00 00。表示大扇区数(Large Sector) 如果小扇区数字段的值为0，本字段就包含该FAT16分区中的总扇区数。如果小扇区数字段的值不为0，那么本字段的值为0。</span><br><span class="line">11偏移量地址36H，长度为8，内容：46 41 54 31 36 20 20 20，对于ASCII码为“FAT16”，表示文件系统类型(File System Type) 根据该磁盘格式，该字段的值可以为FAT、FAT12或FAT16</span><br><span class="line">EB 3C 90 4D 53 44 4F 53 35 2E 30 00 02 01 01 00 02 20 00 40 0B F0 09 00 12 00 02 00 00 00 00 00 00 00 00 00 00 00 29 F6 D1 0D 00 4E 4F 20 4E 41 4D 45 20 20 20 20 46 41 54 31 32 20 20 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 55 AA F0 FF FF</span><br></pre></td></tr></table></figure>
+<p>8.linux中的zip解压：fcrackzip -b -u -l 2-5 2.zip</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/01/06/19-1-6/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/01/19-1-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -579,7 +716,7 @@ decode.exe -X -P  9158753624 apple.mp3<br>
 1.JPEG (jpg)，文件头：FFD8FFE0   尾FF D9<br>
 PNG (png)，文件头：89504E47  尾AE426082<br>
 GIF (gif)，文件头：47494638  尾00 3B<br>
-ZIP Archive (zip)，文件头：504B0304<br>
+ZIP Archive (zip)，文件头：504B0304 尾504B0102<br>
 pyc文件，由py编译生成：03 f3 0d 0a<br>
 RAR Archive (rar)，文件头：52617221<br>
 2.有一只狗的图片，还有一个提示image steganography（隐藏起来的）<br>
@@ -1503,135 +1640,6 @@ username=‘aaa’+0 相当于 username=0，得到答案<br>
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/03/18-12-3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="1yy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ozajykkro.bkt.clouddn.com/69c1dcbbly1fjepkwst9zj20xc0xdn0i.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="A funny p1g">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/03/18-12-3/" itemprop="url">无名之辈</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-03T23:57:10+08:00">
-                2018-12-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>真的他妈舒服，你恶心我那我必须恶心你。<br><br>
-1.在PHP 中使用 $_SERVER[“REMOTE_ADDR”] 来取得客户端的 IP地址，但如果客户端是使用代理服务器来访问，那取到的就<br>
-是代理服务器的 IP 地址，而不是真正的客户端 IP 地址。要想透过代理服务器取得客户端的真实 IP 地址，就要使用$_SERVER[“HTTP_X_FORWARDED_FOR”]<br>
-来读取。XFF头代表客户端，也就是HTTP的请求端真实的IP，只有在通过了HTTP 代理或者负载均衡服务器时才会添加该项。<br>
-<a href="http://2.xn--4gqvds8au41q.net" target="_blank" rel="external">2.伪造一个.net</a> 9.9/在英国境内的数据报</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">GET /sHeader/ HTTP/1.1</span><br><span class="line">Host: ctf5.shiyanbar.com</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:63.0;.NET CLR 9.9) Gecko/20100101 Firefox/63.0 </span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</span><br><span class="line">Accept-Language: en-gb,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2 //日本ja-jp 俄罗斯 ru-RU 英国en-gb 美国en-us</span><br><span class="line">Accept-Encoding: gzip, deflate</span><br><span class="line">Referer: http://www.shiyanbar.com/ctf/29</span><br><span class="line">Connection: keep-alive</span><br><span class="line">Cookie: Hm_lvt_34d6f7353ab0915a4c582e4516dffbc3=1543389145,1543639050; Hm_cv_34d6f7353ab0915a4c582e4516dffbc3=1*visitor*169264%2CnickName%3Ayyp1gg; Hm_lpvt_34d6f7353ab0915a4c582e4516dffbc3=1543853982; PHPSESSID=vd0e266m2m1adv6o3iuvd7l4t7</span><br><span class="line">Upgrade-Insecure-Requests: 1</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/12/03/18-12-3/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1686,7 +1694,7 @@ username=‘aaa’+0 相当于 username=0，得到答案<br>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
