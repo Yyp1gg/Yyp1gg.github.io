@@ -239,6 +239,139 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/07/18-12-7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="1yy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ozajykkro.bkt.clouddn.com/69c1dcbbly1fjepkwst9zj20xc0xdn0i.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A funny p1g">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/07/18-12-7/" itemprop="url">超冷的一天</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-07T22:32:01+08:00">
+                2018-12-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>沙雕公司再不发风衣真要冷出问题了。<br></p>
+<p>1.没有什么提示的情况下，抓包看报头里有没有什么线索。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">if(!isset($_POST[&apos;number&apos;]))&#123; //isset函数是检测变量是否设置</span><br><span class="line">   header(&quot;hint:6c525af4059b4fe7d8c33a.txt&quot;);//header函数向客户端发送原始的 HTTP 报头。</span><br><span class="line">   die(&quot;have a fun!!&quot;); </span><br><span class="line">&#125;  // die函数输出一条消息，并退出当前脚本。 </span><br><span class="line">foreach([$_POST] as $global_var) &#123;   //遍历提交的数据  前as后</span><br><span class="line">    foreach($global_var as $key =&gt; $value) &#123;  //键名赋给key 值赋给value</span><br><span class="line">        $value = trim($value); //移除提交字符串两侧的字符,默认在命令行里移除空格，换行，制表符等。</span><br><span class="line">        is_string($value) &amp;&amp; $req[$key] = addslashes($value);//addslashes转义函数</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">function is_palindrome_number($number) &#123;</span><br><span class="line">    $number = strval($number); //将数组及类之外的变量类型转换成字符串类型</span><br><span class="line">    $i = 0;</span><br><span class="line">    $j = strlen($number) - 1;</span><br><span class="line">    while($i &lt; $j) &#123;</span><br><span class="line">        if($number[$i] !== $number[$j]) &#123;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line">        $i++;</span><br><span class="line">        $j--;</span><br><span class="line">    &#125;</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br><span class="line">if(is_numeric($_REQUEST[&apos;number&apos;]))&#123; //is_numeric判断$_REQUEST[&apos;number&apos;]是否为数字或数字字符串</span><br><span class="line">    </span><br><span class="line">   $info=&quot;sorry, you cann&apos;t input a number!&quot;;</span><br><span class="line"></span><br><span class="line">&#125;elseif($req[&apos;number&apos;]!=strval(intval($req[&apos;number&apos;])))&#123;</span><br><span class="line">      </span><br><span class="line">     $info = &quot;number must be equal to it&apos;s integer!! &quot;;  </span><br><span class="line"></span><br><span class="line">&#125;else&#123;</span><br><span class="line"></span><br><span class="line">     $value1 = intval($req[&quot;number&quot;]);</span><br><span class="line">     $value2 = intval(strrev($req[&quot;number&quot;]));  //strrev反转函数。这里是最关键的intval函数</span><br><span class="line"></span><br><span class="line">     if($value1!=$value2)&#123;</span><br><span class="line">          $info=&quot;no, this is not a palindrome number!&quot;;</span><br><span class="line">     &#125;else&#123;</span><br><span class="line">          </span><br><span class="line">          if(is_palindrome_number($req[&quot;number&quot;]))&#123;</span><br><span class="line">              $info = &quot;nice! &#123;$value1&#125; is a palindrome number!&quot;;</span><br><span class="line">          &#125;else&#123;</span><br><span class="line">             $info=$flag;</span><br><span class="line">          &#125;</span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>intval最大的值取决于操作系统。 32 位系统最大带符号的 integer 范围是 -2147483648 到 2147483647。举例，在这样的系统上， intval(‘1000000000000’) 会返回 2147483647。64 位系统上，最大带符号的 integer 值是 9223372036854775807。<br>
+通过上面我们知道服务器的操作系统是32位的，所以我们构造2147483647就可以同时满足2，3条件。通过把空字符可以绕过is_numeric的判断（如%00,%20）,所以我们构造以下poc，number=2147483647%00 和number=2147483647%20都可。<br>
+2.SELECT pwd FROM user WHERE uname = ‘1’^1 group by pwd with rollup limit 1 offset 1#  //于是我们可以构造’1’<sup>1=1</sup>1=0=字母开头的字符串，使条件被满足。 然后按pwd列出，最后有一个null值，并跳过1个数据选取1个数据（就是选择null），返回选取结果为null。把我们提交的密码也设置为null，就可以绕过了。<br>
+SELECT pwd FROM user WHERE uname = ‘cc’^0 group by pwd with rollup limit 1 offset 1#</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$sql=&quot;SELECT pwd FROM user WHERE uname = &apos;&#123;$_POST[&apos;uname&apos;]&#125;&apos;&quot;;</span><br><span class="line">$query = mysqli_query($con,$sql); </span><br><span class="line">if (mysqli_num_rows($query) == 1) &#123; </span><br><span class="line">    $key = mysqli_fetch_array($query);</span><br><span class="line">    if($key[&apos;pwd&apos;] == $_POST[&apos;pwd&apos;]) &#123;</span><br><span class="line">        echo &quot;xxxxxxxxx&quot;;</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        echo &quot;你这密码不太对啊&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;else if(mysqli_num_rows($query) == 0)&#123;</span><br><span class="line">	echo &quot;你这密码不太对啊&quot;;</span><br><span class="line">&#125;</span><br><span class="line">else&#123;</span><br><span class="line">	echo &quot;数据太多了&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>思路：既然我们无法猜出密码到底是什么，那么我们可不可以控制查询的结果是我们自己已知的呢？结合对group by … with rollup语句的介绍，我们可以想到，我们可以控制查询的结果为NULL，再结合 PHP 的弱类型 null==’’，就可以成功绕过了。<br>
+那么我们接下来只需要构造 payload，使得查询结果为 NULL， 但是要想使用group by … with rollup构造出NULL的一个前提条件，就是查询出的结果不为空，那么我们就需要使 uname = '{$_POST[‘uname’]}'这个条件成立，满足这个条件了，再结合limit和offset 很容易就可以返回的结果为NULL 。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/12/07/18-12-7/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/04/18-12-4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1577,131 +1710,6 @@ mysql是一个创业的小青年，只能运行中小型数据库。<br>
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/01/18-1-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="1yy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ozajykkro.bkt.clouddn.com/69c1dcbbly1fjepkwst9zj20xc0xdn0i.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="A funny p1g">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/01/18-1-1/" itemprop="url">跨年啦</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-01T22:36:04+08:00">
-                2018-01-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>一切都在走在正轨上，真好。<br>
-元旦看了些sql注入漏洞的内容，等我多看一些再复习一下以前的过后再来写笔记。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/01/18-1-1/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1756,7 +1764,7 @@ mysql是一个创业的小青年，只能运行中小型数据库。<br>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">43</span>
+                  <span class="site-state-item-count">44</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1769,7 +1777,7 @@ mysql是一个创业的小青年，只能运行中小型数据库。<br>
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -1824,7 +1832,7 @@ mysql是一个创业的小青年，只能运行中小型数据库。<br>
       <div class="footer-inner">
         <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
-<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heartbeat" aria-hidden="true"></i>
   </span>
