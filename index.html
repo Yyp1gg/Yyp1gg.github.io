@@ -239,6 +239,160 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/23/2020-5-23/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="1yy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ozajykkro.bkt.clouddn.com/69c1dcbbly1fjepkwst9zj20xc0xdn0i.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A funny p1g">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/05/23/2020-5-23/" itemprop="url">CTF比赛学习笔记第一周</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-23T10:00:00+08:00">
+                2020-05-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#1.Nmap扫描使用心得：<br>
+当防火墙设置禁止80端口接受ack包和禁止443端口接受syn包时：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo iptables -I INPUT -p ICMP -j DROP</span><br><span class="line">sudo iptables -I INPUT -p tcp --tcp-flags ALL ACK --dport 80 -j DROP</span><br><span class="line">sudo iptables -I INPUT -p tcp --tcp-flags ALL SYN --dport 443 -j DROP</span><br></pre></td></tr></table></figure>
+<p>指定80端口发送syn包<br>
+<code>nmap -sP -PS 80 x.x.x.x -disable-arp-ping</code></p>
+<blockquote>
+<p>当TCP SYN数据包里的SYN数据包被都过滤时<br>
+<code>sudo iptables -I INPUT -p tcp --tcp-flags ALL SYN -j DROP</code><br>
+使用ACK数据包的Ping扫描，使用-PA参数来在80端口发送ACK数据包<br>
+<code>sudo nmap -sP -PA 192.168.43.132 -disable-arp-ping</code><br>
+把防火墙设置成TCP连接中的ACK数据包都拦截掉<br>
+<code>sudo iptables -I INPUT -p tcp --tcp-flags ALL ACK -j DROP</code><br>
+使用ICMP回环绕过TCP ACK Ping<br>
+<code>nmap -sP -PE 192.168.43.132 -disable-arp-ping</code><br>
+拦截ICMP回环<br>
+<code>sudo iptables -A INPUT -p icmp -m icmp --icmp-type echo-request -j DROP</code><br>
+使用ICMP时间戳Ping绕过ICMP回环<br>
+<code>sudo nmap -sP -PP 192.168.43.132 -disable-arp-ping</code><br>
+再把UDP拦截了</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo iptables -I INPUT -p ICMP -j DROP</span><br><span class="line">sudo iptables -I INPUT -p tcp --tcp-flags ALL ACK --dport 80 -j DROP</span><br><span class="line">sudo iptables -I INPUT -p tcp --tcp-flags ALL SYN --dport 443 -j DROP</span><br><span class="line">sudo iptables -I INPUT -p udp -j DROP</span><br></pre></td></tr></table></figure>
+<p>在ICMP TCP和UDP都被拦截时，我们可以用-PO参数发送有IP头中特定协议号的IP数据包，如果没有指定协议，则发送多个用于ICMP，IGMP和IP-in-IP协议.<br>
+<code>sudo nmap -sP -PO 192.168.43.132 -disable-arp-ping</code><br>
+加上拦截IP协议,基本可以拦截很多方式的扫描了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo iptables -I INPUT -p ICMP -j DROP</span><br><span class="line">sudo iptables -I INPUT -p tcp --tcp-flags ALL ACK --dport 80 -j DROP</span><br><span class="line">sudo iptables -I INPUT -p tcp --tcp-flags ALL SYN --dport 443 -j DROP</span><br><span class="line">sudo iptables -I INPUT -p udp -j DROP</span><br><span class="line">sudo iptables -I INPUT -p IP -j DROP</span><br></pre></td></tr></table></figure>
+<p>#2.sqlmap与sql注入<br>
+<strong>一定要带上原始数据包中的cookie！</strong><br>
+GET型注入一般用 sqlmap -u &quot;url&quot;<br>
+POST型注入一般用 sqlmap -u “url” --data “POST参数”</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sqlmap -u [“url”] --cookie=[&quot;cookie的内容&quot;] --dbs #获取数据库</span><br><span class="line">sqlmap -u [“url”] --cookie=[&quot;cookie的内容&quot;]--current-user #获取当前用户名称 ：</span><br><span class="line">sqlmap -u [“url”] --cookie=[&quot;cookie的内容&quot;]--current-db #获取当前数据库名称</span><br><span class="line">sqlmap -u [“url”] --cookie=[&quot;cookie的内容&quot;]-D [数据库名] --tables   #列出表名 ： </span><br><span class="line">sqlmap -u [“url”] --cookie=[&quot;cookie的内容&quot;]-D [数据库名] -T[表名] --columns #列出字段 </span><br><span class="line">sqlmap -u [“url”] --cookie=[&quot;cookie的内容&quot;]-D [数据库名] -T [表名] -C [字段名1,字段名2,…] --dump #获取字段内容</span><br><span class="line">--data [&quot;post的内容&quot;]</span><br></pre></td></tr></table></figure>
+<p>实际例子。–second-url为跳转后，专门用来输入查询的链接。指查询和返回值不在同一个链接里的情况。<br>
+<code>p2 sqlmap.py -u&quot;http://127.0.0.1/dvwa/vulnerabilities/sqli/session-input.php#&quot; --data=&quot;id=1&amp;Submit=Submit&quot; --second-url=&quot;http://127.0.0.1/dvwa/vulnerabilities/sqli/&quot; --cookie=&quot;security=high; PHPSESSID=cumt3v4cgsldm4p0sosdbg00u4&quot;</code><br>
+#3.xss攻击<br>
+反射型和储存型弹窗演示都成功，但目前暂时没有找到好的攻击脚本。<br>
+<code>&lt;script&gt;alert('xss')&lt;/script&gt;</code></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/23/2020-5-31/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -359,160 +513,6 @@ ssh破解<br>
 <code>hydra -L user.txt -P passwd.txt -o ssh.txt -vV -t 5 ip ssh</code><br>
 ftp破解<br>
 <code>hydra -L user.txt -P passwd.txt -o ftp.txt -vV -t 5 ip ftp</code></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/23/2020-5-23/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="1yy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ozajykkro.bkt.clouddn.com/69c1dcbbly1fjepkwst9zj20xc0xdn0i.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="A funny p1g">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/05/23/2020-5-23/" itemprop="url">CTF比赛学习笔记第一周</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-23T10:00:00+08:00">
-                2020-05-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>#1.Nmap扫描使用心得：<br>
-当防火墙设置禁止80端口接受ack包和禁止443端口接受syn包时：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo iptables -I INPUT -p ICMP -j DROP</span><br><span class="line">sudo iptables -I INPUT -p tcp --tcp-flags ALL ACK --dport 80 -j DROP</span><br><span class="line">sudo iptables -I INPUT -p tcp --tcp-flags ALL SYN --dport 443 -j DROP</span><br></pre></td></tr></table></figure>
-<p>指定80端口发送syn包<br>
-<code>nmap -sP -PS 80 x.x.x.x -disable-arp-ping</code></p>
-<blockquote>
-<p>当TCP SYN数据包里的SYN数据包被都过滤时<br>
-<code>sudo iptables -I INPUT -p tcp --tcp-flags ALL SYN -j DROP</code><br>
-使用ACK数据包的Ping扫描，使用-PA参数来在80端口发送ACK数据包<br>
-<code>sudo nmap -sP -PA 192.168.43.132 -disable-arp-ping</code><br>
-把防火墙设置成TCP连接中的ACK数据包都拦截掉<br>
-<code>sudo iptables -I INPUT -p tcp --tcp-flags ALL ACK -j DROP</code><br>
-使用ICMP回环绕过TCP ACK Ping<br>
-<code>nmap -sP -PE 192.168.43.132 -disable-arp-ping</code><br>
-拦截ICMP回环<br>
-<code>sudo iptables -A INPUT -p icmp -m icmp --icmp-type echo-request -j DROP</code><br>
-使用ICMP时间戳Ping绕过ICMP回环<br>
-<code>sudo nmap -sP -PP 192.168.43.132 -disable-arp-ping</code><br>
-再把UDP拦截了</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo iptables -I INPUT -p ICMP -j DROP</span><br><span class="line">sudo iptables -I INPUT -p tcp --tcp-flags ALL ACK --dport 80 -j DROP</span><br><span class="line">sudo iptables -I INPUT -p tcp --tcp-flags ALL SYN --dport 443 -j DROP</span><br><span class="line">sudo iptables -I INPUT -p udp -j DROP</span><br></pre></td></tr></table></figure>
-<p>在ICMP TCP和UDP都被拦截时，我们可以用-PO参数发送有IP头中特定协议号的IP数据包，如果没有指定协议，则发送多个用于ICMP，IGMP和IP-in-IP协议.<br>
-<code>sudo nmap -sP -PO 192.168.43.132 -disable-arp-ping</code><br>
-加上拦截IP协议,基本可以拦截很多方式的扫描了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo iptables -I INPUT -p ICMP -j DROP</span><br><span class="line">sudo iptables -I INPUT -p tcp --tcp-flags ALL ACK --dport 80 -j DROP</span><br><span class="line">sudo iptables -I INPUT -p tcp --tcp-flags ALL SYN --dport 443 -j DROP</span><br><span class="line">sudo iptables -I INPUT -p udp -j DROP</span><br><span class="line">sudo iptables -I INPUT -p IP -j DROP</span><br></pre></td></tr></table></figure>
-<p>#2.sqlmap与sql注入<br>
-<strong>一定要带上原始数据包中的cookie！</strong><br>
-GET型注入一般用 sqlmap -u &quot;url&quot;<br>
-POST型注入一般用 sqlmap -u “url” --data “POST参数”</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sqlmap -u [“url”] --cookie=[&quot;cookie的内容&quot;] --dbs #获取数据库</span><br><span class="line">sqlmap -u [“url”] --cookie=[&quot;cookie的内容&quot;]--current-user #获取当前用户名称 ：</span><br><span class="line">sqlmap -u [“url”] --cookie=[&quot;cookie的内容&quot;]--current-db #获取当前数据库名称</span><br><span class="line">sqlmap -u [“url”] --cookie=[&quot;cookie的内容&quot;]-D [数据库名] --tables   #列出表名 ： </span><br><span class="line">sqlmap -u [“url”] --cookie=[&quot;cookie的内容&quot;]-D [数据库名] -T[表名] --columns #列出字段 </span><br><span class="line">sqlmap -u [“url”] --cookie=[&quot;cookie的内容&quot;]-D [数据库名] -T [表名] -C [字段名1,字段名2,…] --dump #获取字段内容</span><br><span class="line">--data [&quot;post的内容&quot;]</span><br></pre></td></tr></table></figure>
-<p>实际例子。–second-url为跳转后，专门用来输入查询的链接。指查询和返回值不在同一个链接里的情况。<br>
-<code>p2 sqlmap.py -u&quot;http://127.0.0.1/dvwa/vulnerabilities/sqli/session-input.php#&quot; --data=&quot;id=1&amp;Submit=Submit&quot; --second-url=&quot;http://127.0.0.1/dvwa/vulnerabilities/sqli/&quot; --cookie=&quot;security=high; PHPSESSID=cumt3v4cgsldm4p0sosdbg00u4&quot;</code><br>
-#3.xss攻击<br>
-反射型和储存型弹窗演示都成功，但目前暂时没有找到好的攻击脚本。<br>
-<code>&lt;script&gt;alert('xss')&lt;/script&gt;</code></p>
 
           
         
@@ -1912,7 +1912,7 @@ F2 48：最后修改文件日期</p>
 color="105,105,105" opacity='0.8' zIndex="-2" count="20" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
 
   
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
   <!-- 页面点击小红心 -->
 <script type="text/javascript" src="/js/src/love.js"></script>
