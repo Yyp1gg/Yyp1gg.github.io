@@ -239,6 +239,486 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/20/18-1-20/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="1yy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ozajykkro.bkt.clouddn.com/69c1dcbbly1fjepkwst9zj20xc0xdn0i.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A funny p1g">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/20/18-1-20/" itemprop="url">afraid</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-20T23:57:44+08:00">
+                2018-01-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>don`t hate me plz  😖</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/07/18-1-7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="1yy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ozajykkro.bkt.clouddn.com/69c1dcbbly1fjepkwst9zj20xc0xdn0i.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A funny p1g">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/07/18-1-7/" itemprop="url">这样不太好</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-07T23:24:31+08:00">
+                2018-01-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>15号补笔记中…6、7章的内容。<br><br>
+一、第六章上传漏洞。只要web允许上传文件就有可能产生文件上传漏洞。<br>
+(1).解析漏洞<br>
+攻击者利用上传漏洞时通常时通过web容器的解析漏洞达到目的。常见的web容器有iis，nginx，apacha，tomcat等。<br>
+1).iis解析漏洞<br>
+1.在建立.asa、.asp目录的文件都会被当作asp文件解析。比如test.txt和test.asp;1.jpg（图片木马，后文补充）<br>
+2.webdav漏洞。webdav时基于http1.1协议的通信协议，它扩展了http。若某web容器支持webdav并且支持get，put方法等，就可能存在webdav漏洞。<br>
+第一步发送options请求探测服务器支持的http方法。<br>
+第二步用get或put等方法上传shell文件shell.txt。<br>
+第三步用move或copy方法将shell.txt改名为shell.asp。这样就简单的获取了一个webshell。<br>
+2).apache解析漏洞<br>
+apache有一个扩展名白名单，当遇到不认识的扩展名时，就从后向前解析，直到碰到名单上有的扩展名为止。若都不认识，则会暴露源代码。比如有a.php.rar.aa文件，apapche容器只认识.php，就会把a文件当php文件解析。<br>
+3).nginx解析漏洞<br>
+nginx通常作为php的解析容器。<a href="http://xn--www-kj3fu47q60m.yy.com/1.jpg/shell.php%EF%BC%8Cshell.php%E6%98%AF%E9%9A%90%E8%97%8F%E5%9C%A81.jpg%E7%9A%84%E5%9B%BE%E7%89%87%E6%9C%A8%E9%A9%AC%EF%BC%8C%E5%85%B6%E5%AE%9E%E4%B8%8D%E5%AD%98%E5%9C%A8%E8%BF%99%E4%B8%AA%E6%96%87%E4%BB%B6%E3%80%82%E8%BF%99%E6%A0%B7%E5%B0%B1%E5%8F%AF%E4%BB%A5%E5%BE%97%E5%88%B0wenshell%E3%80%82" target="_blank" rel="external">当访问www.yy.com/1.jpg/shell.php，shell.php是隐藏在1.jpg的图片木马，其实不存在这个文件。这样就可以得到wenshell。</a><br>
+(2).绕过上传漏洞<br>
+文件上传的流程：客户端使用js验证，服务器端使用随机数重命名防止重复。程序猿防止上传漏洞的方法可以分为客户端用js检测和服务器端检测文件mime类型，扩展名合法否，存在恶意代码否。<br>
+1).绕过客户端js检测<br>
+js检测：checkfile()函数有一个白名单，点提交文件后（执行submit事件）通过js编写的checkfile()检测后，upload()函数会将文件上传至服务器。<br>
+1.使用firebug删除submit事件。<br>
+2.编写一个没有submit事件的表单替换原有的。<br>
+3.中间人攻击。在js验证后在传输层修改文件。<br>
+2).绕过服务器检测<br>
+1.服务器通常会对扩展名进行检测，一般使用黑白名单的策略。<br>
+黑名单攻击的方法：<br>
+a.找到程序猿忽略的扩展名<br>
+b.文件名大小写转换<br>
+c.“.asp.”=“.asp ”=“.asp”<br>
+白名单攻击方法：<br>
+a.test.asp;1.jpg<br>
+2.mime验证：指定打开某种扩展名的程序。<br>
+攻击方法：传输层修改文件扩展名。<br>
+3.截断上传攻击<br>
+比如，服务器验证的白名单扩展名有.jpg，将上传的文件名改为“shell.asp%001.jpg”，再将%00的值改为null，shell.asp后面的字符就会被截断。<br>
+(3).防御上传漏洞<br>
+1.建立完整的过滤目录<br>
+2.在upload()函数里让文件重命名，保留一个原有扩展名。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/01/07/18-1-7/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/03/18-1-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="1yy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ozajykkro.bkt.clouddn.com/69c1dcbbly1fjepkwst9zj20xc0xdn0i.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A funny p1g">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/03/18-1-3/" itemprop="url">a mouth</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-03T23:24:31+08:00">
+                2018-01-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>13号补笔记…5章的内容…<br><br>
+第五章——sql注入漏洞。<br>
+一.sql注入漏洞的原因是用户输入的数据被SQL解释其执行。以前的笔记：</p>
+<blockquote>
+<p>注入攻击的本质：1.能够用户控制输入。 2.原来执行的代码拼接了用户的输入。<br>
+利用注入漏洞的目的就是绕过程序限制，使用户输入的数据带入数据库，利用数据库获得更大的权限或者更多信息。可以归为查询数据、读写文件、执行命令。<br>
+常见注入漏洞可以分为数字型注入和字符型注入。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">www.xxser.com/test.php?id=*8* //执行正常成功返回，猜测sql语句为：select * from table where id=8</span><br><span class="line">www.xxser.com/test.php?id=*8&apos; *//会出错</span><br><span class="line">www.xxser.com/test.php?id=*8 and 1=1* //执行正常成功返回</span><br><span class="line">www.xxser.com/test.php?id=*8 and 1=2* // 可以执行但无返回值</span><br></pre></td></tr></table></figure>
+<p>以上是基本的数字型注入。可以修改1=1利用union语句执行联合查询。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select * from table where username=&apos;*admin*&apos; //例句 </span><br><span class="line">select * from table where username=&apos;*admin and 1=1*&apos; //像数字型一样不行</span><br><span class="line">select * from table where username=&apos;*admin&apos; and 1=1 --*&apos; // 必须闭合单引号和注释掉多余代码</span><br></pre></td></tr></table></figure>
+<p>–代表注释。输入的第一个’可以反向闭合掉username的输入框。<br>
+以上都是布尔值判断注入点存在与否，还有可以通过延时判断（sleep（x））能否注入。<br>
+二.常见数据库的注入（sql sever和 mysql）<br>
+(1).sql server<br>
+sql server是微软开发，用在大型数据库的数据库管理系统。<br>
+1).利用错误回显提取信息。<br>
+1.枚举当前表及列<br>
+<code>select from users where username='root' and password='root' having 1=1--'</code><br>
+报错：user.id无效，没有包含在聚合函数或者gruop by子句中。* 继续构造 ：</p>
+<p><code>select * from users where username='*root*' and password='*root' gruop by user.id having 1=1--*'</code><br>
+报错：user.username无效。循环，直到查询出所有列名。<br>
+2.利用数据类型错误提取数据。<br>
+<code>select * from users where username='*root*' and password='*root' and 1&gt;(select top 1 username from users)*'</code><br>
+报错：varchar值root转换为int失败。找到账户名root。<br>
+<code>select * from users where username='*root*' and password='*root' and 1&gt;(select top 1 username from users where username not in ('root'))*'</code><br>
+找到下一个username。<br>
+2).order by 子句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">select id,username,password,form users where id=1 // sql正常执行</span><br><span class="line">select id,username,password,form users where id=1 order by 1 //按第1列排序</span><br><span class="line">select id,username,password,form users where id=1 order by 2 //按第2列排序</span><br><span class="line">select id,username,password,form users where id=1 order by 3 //按第3列排序</span><br><span class="line">select id,username,password,form users where id=1 order by 4 //抛出异常</span><br></pre></td></tr></table></figure>
+<p>异常：order by位号4超出列表中项数的范围。得知当前sql语句有几列存在，可以配合union关键字进行下一步攻击。<br>
+3).union查询<br>
+union查询基本规则：所有查询的列数必须相同，数据类型必须兼容。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select id,username,password,sex from users where id=1 union select null ;</span><br><span class="line">select id,username,password,sex from users where id=1 union select null,null;</span><br><span class="line">select id,username,password,sex from users where id=1 union select null,null,null;//直到无异常产生</span><br></pre></td></tr></table></figure>
+<p>4).存储过程<br>
+类似系统自带的函数。<br>
+最容易使用的存储过程是xp_cmdshell，这个存储过程允许用户操作系统函数。<br>
+<code>select * from table where id = *1; exec (xp_cmdshell 'net user test test /add')*</code> //动态执行，添加test账户，登录密码test`<br>
+类似的存储过程还有xp_regread(读取注册表),xp_regdeletevalue(删除注册表),xp_dirtree(读取目录)<br>
+5).动态执行<br>
+sql server支持动态执行，用户可以提交一个字符串来执行sql语句。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">exec(&apos;select username  from users&apos;)</span><br><span class="line">exec(&apos; selec&apos;+&apos;t  password fr&apos;+&apos;om users &apos;)</span><br></pre></td></tr></table></figure>
+<p>(2).mysql<br>
+mysql是一个创业的小青年，只能运行中小型数据库。<br>
+1).获取元数据<br>
+通过mysql提供的信息数据库information_schema,information_schema获取元数据。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select schema_name from information_schema.schemata limit 0,1 //从information_schema.schemata表中查询出第一个数据库名称。</span><br><span class="line">select table_name from information_schema.tables where table_schema=(select database()) limit 0,1 // 查询当前数据库表</span><br><span class="line">select column_name from information_schema.columns where table_name=&apos;students&apos; limit 0,1 // 查询指定表的所有字段</span><br></pre></td></tr></table></figure>
+<p>2).union查询<br>
+明天装了mysql测试了再来补。<br>
+3).函数利用<br>
+1.load_file()<br>
+使用mysql读取磁盘文件是非常容易的。文件必须在磁盘上，并且路径必须为绝对路径,要求用户持有file权限。<br>
+<code>union select 1,load_file('/etc/password'),3,4,5 #</code><br>
+2.into outfile<br>
+向磁盘写入文件的操作。要求类似load_file()。<br>
+<code>select '&lt;?php phpinfo();?&gt;' into outfile 'c:\wwwroot\1.php'</code><br>
+3.链接函数concat_ws()<br>
+<code>select name from student where id=1 union select concat(user(),0x2c,database(),0x2c,version())</code><br>
+4).显错式注入<br>
+使用错误提取数据库信息，类似sql server。<br>
+5).宽字节注入<br>
+宽字节注入是由编码不统一造成的，一般出现在php+mysql中。当php.ini中的magic_quotes_gpc（魔术引号）开启时，get，post，cookie接受的’ &quot; \和null字符都会被加一个\转义。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">echo &quot;&lt;h3&gt; input :&quot;. $_get[&apos;id&apos;].&quot;&lt;/h3&gt;&quot;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<p>get接收到的id若是’会被转义为’。但是，当输入“%d5’”时，会被转义为“珹’”。在这个情况下，单引号就没有被转义了。<br>
+6).长字符截断<br>
+当sql_mode选项为dafault时，strict_all_tables选项是关闭的。这时mysql对插入超长的值只会提示warning而不是error。<br>
+这时，定义一个username为varchar(8)。若插入一个username为&quot;admin        x&quot;，出现警告后仍然插入到数据库，长度为8。<br>
+假如管理员登陆用户名是admin，攻击者注册一个admin…x。也可以进入后台管理界面。<br>
+7).延时注入<br>
+延时注入属于盲注技巧的一种。<br>
+<code>select * from users where id=1 and sleep(5); //5秒后执行语句</code><br>
+可以用sleep函数判断url是否存在sql注入漏洞。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">www.xxx.org/uesr.jsp?id=1 // 正常返回</span><br><span class="line">www.xxx.org/uesr.jsp?id=1 &apos; //正常返回</span><br><span class="line">www.xxx.org/uesr.jsp?id=1 &apos; and 1=1//正常返回</span><br><span class="line">www.xxx.org/uesr.jsp?id=1 and sleep(3)//正常返回，多3秒后打开页面</span><br></pre></td></tr></table></figure>
+<p>三、防御sql注入<br>
+1.严格设定参数的数据类型。<br>
+2.特俗字符转义。<br>
+3.使用预编译语句。参考以前的笔记。预编译语句在创建的时候就已经将sql语句发送给dbms（数据库管理系统）完成了解析检查编译的工作，使用时只是将变量传给已经预编译好的sql语句。<br>
+4.谨慎使用存储过程。<br>
+5.利用框架技术提供的封装技术。类似预编译。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/01/03/18-1-3/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/01/18-1-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1113,400 +1593,6 @@ Tomcat也是一个流行的容器。和JMX-console类似，管理员也可以在
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/15/17-12-15-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="1yy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ozajykkro.bkt.clouddn.com/69c1dcbbly1fjepkwst9zj20xc0xdn0i.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="A funny p1g">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/15/17-12-15-2/" itemprop="url">愿时光没有磨平我的麟角</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-15T16:51:26+08:00">
-                2017-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>也算可以专心做事了,可不能给自己丢脸啊。Be stronger.<br><br>
-昨天看了拒绝服务攻击ddos。ddos攻击的本质是对有限资源的无限滥用，利用合理的请求造成资源过载，导致服务器崩溃服务不可用。常见的ddos攻击有syn flood，udp flood，icmp flood等。syn最常见，这是因为它利用了tcp三次握手设计的缺陷。<br>
-应用层ddos是发生在三次握手已经完成环境下，发起攻击的ip都是真实的。应用层ddos攻击与防御方法如下：<br>
-1.限制请求频率。通过ip地址和cookie定位一个客户端，若该客户端在一定时间内请求过于频繁则对之后的请求冲顶想到一个出错页面。可以通过大量代理服务器不断更换ip攻击服务器。雅虎提供过一个算法判断客户端的请求频率。<br>
-2.验证码。提前将验证码图片生成好，以哈希过的字符串作为验证码图片的文件名，并且文件名需要随机化防止通过彩虹表建立验证码与明文的对应关系。<br>
-3.修改配置参数以缓解ddos攻击。如调小timeout，增加maxclient等。<br>
-4.让客户端解析js文件或flash文件以判断客户端是不是浏览器。<br>
-利用服务器的漏洞或设计缺陷直接造成ddos。<br>
-1.slowlories攻击。恶意占用有限的链接不释放（有限资源的无限滥用），在http头中只有一个换行符\r\n（正常有俩），服务器就会等待第二个换行符。这时只要再发送任意http头就可以保持链接。今天依然有效。<br>
-2.http post dos。发送post包时，指定一个很大的content-length值并以很低的速度发送，保持链接不断开。在连接数多了以后就会造成ddos。<br>
-3.server limit dos。http包头超出限制。比如通过xss写入一个超长的cookie，在刷新页面时会发送包涵这个cookie的http头，服务器会因为超长拒绝请求，从而导致ddos。<br>
-还有就是正则表达式会引发ddos。如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^(a+)+$</span><br></pre></td></tr></table></figure>
-<p>在输入4个a时会遍历16次，但输入输入16个a时会遍历65536次。当用户恶意构造输入时，会大量消耗cpu和内存资源。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/12/15/17-12-15-2/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/15/17-12-15/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="1yy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ozajykkro.bkt.clouddn.com/69c1dcbbly1fjepkwst9zj20xc0xdn0i.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="A funny p1g">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/15/17-12-15/" itemprop="url">南山旧事</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-15T16:22:02+08:00">
-                2017-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>恍恍惚惚看了一部电影。<br>
-前半小时是纯爱片，牙都会甜掉那种。<br>
-可谁知镜头一转，后来一个小时变成了推理悬疑片，风格是阴冷又灰暗，看得通透的地方还没几处，但偶尔也可以发现几条指向以后的伏笔。<br>
-本以为在最后会填完坑来个首尾呼应皆大欢喜拍23456部的时候，却活生生整成了喜剧片。让人笑着哭又哭着笑，笑是从心里的笑，哭是从心里的哭。<br>
-仓惶收尾，连演员是谁都不知道。<br>
-电影的名字是《南山旧事》，拍完就禁播了，也不会有续集了。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/10/17-12-13/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="1yy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ozajykkro.bkt.clouddn.com/69c1dcbbly1fjepkwst9zj20xc0xdn0i.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="A funny p1g">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/10/17-12-13/" itemprop="url">12</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-10T15:15:03+08:00">
-                2017-12-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>好久没更博了<s>到处混吃混喝</s> (。＾▽＾)  嘿嘿。<br><br>
-复习了访问控制和密码学，虽然忘了一些但看书看一会儿就想起来了。<br>
-然后看了web框架安全。主要讲了mvc框架（模型m，视图v，控制器c）的安全。简单来说就是&quot;在正确的地方做正确的事&quot;  。<br>
-举几个例子：<br>
-1.在对页面进行渲染的view层可以选择框架提供的编码方法但如果全部使用同一种编码方法很可能被攻击者绕过。所以可以根据是否有细分场景的不同编码方式来判断安全方案是否完整。<br>
-2.在对抗csrf时，web框架可使用token（随机数）解决问题。http post请求主要用来处理写操作（增删改），而post不足以对抗csrf。<br>
-3.http返回头为了防止crlf注入攻击可以设置限制目的地址。<br>
-4.使用orm框架针对sql注入攻击。<br>
-5.一些框架自身的bug</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/12/10/17-12-13/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1561,7 +1647,7 @@ Tomcat也是一个流行的容器。和JMX-console类似，管理员也可以在
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

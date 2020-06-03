@@ -239,6 +239,400 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/15/17-12-15-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="1yy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ozajykkro.bkt.clouddn.com/69c1dcbbly1fjepkwst9zj20xc0xdn0i.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A funny p1g">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/15/17-12-15-2/" itemprop="url">愿时光没有磨平我的麟角</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-15T16:51:26+08:00">
+                2017-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>也算可以专心做事了,可不能给自己丢脸啊。Be stronger.<br><br>
+昨天看了拒绝服务攻击ddos。ddos攻击的本质是对有限资源的无限滥用，利用合理的请求造成资源过载，导致服务器崩溃服务不可用。常见的ddos攻击有syn flood，udp flood，icmp flood等。syn最常见，这是因为它利用了tcp三次握手设计的缺陷。<br>
+应用层ddos是发生在三次握手已经完成环境下，发起攻击的ip都是真实的。应用层ddos攻击与防御方法如下：<br>
+1.限制请求频率。通过ip地址和cookie定位一个客户端，若该客户端在一定时间内请求过于频繁则对之后的请求冲顶想到一个出错页面。可以通过大量代理服务器不断更换ip攻击服务器。雅虎提供过一个算法判断客户端的请求频率。<br>
+2.验证码。提前将验证码图片生成好，以哈希过的字符串作为验证码图片的文件名，并且文件名需要随机化防止通过彩虹表建立验证码与明文的对应关系。<br>
+3.修改配置参数以缓解ddos攻击。如调小timeout，增加maxclient等。<br>
+4.让客户端解析js文件或flash文件以判断客户端是不是浏览器。<br>
+利用服务器的漏洞或设计缺陷直接造成ddos。<br>
+1.slowlories攻击。恶意占用有限的链接不释放（有限资源的无限滥用），在http头中只有一个换行符\r\n（正常有俩），服务器就会等待第二个换行符。这时只要再发送任意http头就可以保持链接。今天依然有效。<br>
+2.http post dos。发送post包时，指定一个很大的content-length值并以很低的速度发送，保持链接不断开。在连接数多了以后就会造成ddos。<br>
+3.server limit dos。http包头超出限制。比如通过xss写入一个超长的cookie，在刷新页面时会发送包涵这个cookie的http头，服务器会因为超长拒绝请求，从而导致ddos。<br>
+还有就是正则表达式会引发ddos。如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^(a+)+$</span><br></pre></td></tr></table></figure>
+<p>在输入4个a时会遍历16次，但输入输入16个a时会遍历65536次。当用户恶意构造输入时，会大量消耗cpu和内存资源。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/12/15/17-12-15-2/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/15/17-12-15/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="1yy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ozajykkro.bkt.clouddn.com/69c1dcbbly1fjepkwst9zj20xc0xdn0i.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A funny p1g">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/15/17-12-15/" itemprop="url">南山旧事</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-15T16:22:02+08:00">
+                2017-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>恍恍惚惚看了一部电影。<br>
+前半小时是纯爱片，牙都会甜掉那种。<br>
+可谁知镜头一转，后来一个小时变成了推理悬疑片，风格是阴冷又灰暗，看得通透的地方还没几处，但偶尔也可以发现几条指向以后的伏笔。<br>
+本以为在最后会填完坑来个首尾呼应皆大欢喜拍23456部的时候，却活生生整成了喜剧片。让人笑着哭又哭着笑，笑是从心里的笑，哭是从心里的哭。<br>
+仓惶收尾，连演员是谁都不知道。<br>
+电影的名字是《南山旧事》，拍完就禁播了，也不会有续集了。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/10/17-12-13/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="1yy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ozajykkro.bkt.clouddn.com/69c1dcbbly1fjepkwst9zj20xc0xdn0i.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A funny p1g">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/10/17-12-13/" itemprop="url">12</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-10T15:15:03+08:00">
+                2017-12-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>好久没更博了<s>到处混吃混喝</s> (。＾▽＾)  嘿嘿。<br><br>
+复习了访问控制和密码学，虽然忘了一些但看书看一会儿就想起来了。<br>
+然后看了web框架安全。主要讲了mvc框架（模型m，视图v，控制器c）的安全。简单来说就是&quot;在正确的地方做正确的事&quot;  。<br>
+举几个例子：<br>
+1.在对页面进行渲染的view层可以选择框架提供的编码方法但如果全部使用同一种编码方法很可能被攻击者绕过。所以可以根据是否有细分场景的不同编码方式来判断安全方案是否完整。<br>
+2.在对抗csrf时，web框架可使用token（随机数）解决问题。http post请求主要用来处理写操作（增删改），而post不足以对抗csrf。<br>
+3.http返回头为了防止crlf注入攻击可以设置限制目的地址。<br>
+4.使用orm框架针对sql注入攻击。<br>
+5.一些框架自身的bug</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/12/10/17-12-13/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/26/17-11-16/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1148,395 +1542,6 @@ cookie劫持：算法生成独一无二的cookie，分为session cookie，临时
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/07/17-11-6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="1yy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ozajykkro.bkt.clouddn.com/69c1dcbbly1fjepkwst9zj20xc0xdn0i.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="A funny p1g">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/07/17-11-6/" itemprop="url">了无心愿</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-07T01:13:01+08:00">
-                2017-11-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>今天学习了XSS的防御法则。<br></p>
-<ul>
-<li>XSS的防御的复杂的。主要有三个基础方法：httponly,标签白名单，对字符的编码或转义。<br>
-1.httponly:在set-cookie时添加httponly标记，将cookike与客户端ip绑定。但可以通过盗取IP，模拟IP破解。<br>
-2.标签白名单：用户输入数据（富文本等）时只对一些简单无危害的标签通过。但存在一些敏感字符，筛选后会改变本来意图。<br>
-3.字符的编码或转义：在输出到HTML时，对一些可能出现XSS的标签做编码或转义。在不同的场合分别使用HTMLENCODE或者JSENCODE。有时候需要分别使用这两个编码，比如在对付DOM XSS时。</li>
-<li>xss漏洞虽然复杂种类繁多，但是可以彻底解决。在不同场合使用不同方法，方法之间相互配合。<br></li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/11/07/17-11-6/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/06/17-11-5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="1yy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ozajykkro.bkt.clouddn.com/69c1dcbbly1fjepkwst9zj20xc0xdn0i.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="A funny p1g">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/06/17-11-5/" itemprop="url">生日快乐</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-06T01:38:00+08:00">
-                2017-11-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>学习XSS中…有点飘<br></p>
-<ul>
-<li>今天快速的看完了XSS的进攻内容。在昨天的内容后又讲了：XSS蠕虫，FalshXSS等更为厉害的攻击方式。<br>
-在攻击中，攻击者需要得到可用的JS这就需要用到一些调试工具，比如：firebug等。还需要一些XSS构造技巧：利用字符编码可以逃过编码搜索，绕过长度限制，利用BASE标签（相对路径）等。<br>
-一些成熟的JS开发框架也有XSS漏洞。DOJO，YUI,JQ都存在。<br>
-明天开始看防御部分，后天可能会看一些视频。<br></li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/11/06/17-11-5/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/04/17-11-4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="1yy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ozajykkro.bkt.clouddn.com/69c1dcbbly1fjepkwst9zj20xc0xdn0i.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="A funny p1g">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/04/17-11-4/" itemprop="url">Crown&Ambition</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-04T18:51:59+08:00">
-                2017-11-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>今天开始学习XSS。<br></p>
-<ul>
-<li>1.XSS：通过“HTML注入”篡改网页，插入恶意脚本，从而控制用户浏览器。根据效果分为：1.反射XSS（非持久）：把用户（往往是黑客）输入反射给浏览器 2.存储型xss（持久）：把用户输入的数据储存在服务器，等待其他用户（往往不知情）访问 3.DOM XSS（可以划分在1）：修改DOM（标签等）形成XSS。</li>
-<li>2.XSS playload:低级cookike劫持，但是很容易防御，比如与客户端IP绑定。高级的有：get与post请求：得到想要的ID，钓鱼，识别浏览器：alter(navigator.userAgent)等，识别用户安装的软件：每个软件相对的ACTIVEX控件都有唯一ID、或者通过识别图标来确定，通过JAVAapplet接口获取本地IP。<br></li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/11/04/17-11-4/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1591,7 +1596,7 @@ cookie劫持：算法生成独一无二的cookie，分为session cookie，临时
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
