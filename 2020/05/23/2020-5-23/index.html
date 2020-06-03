@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="normal," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="CTF比赛学习笔记 第一周 #1.Nmap扫描使用心得： 当防火墙设置禁止80端口接受ack包和禁止443端口接受syn包时： 123sudo iptables -I INPUT -p ICMP -j DROPsudo iptables -I INPUT -p tcp --tcp-flags ALL ACK --dport 80 -j DROPsudo iptables -I INPUT -p t">
+<meta name="description" content="#1.Nmap扫描使用心得： 当防火墙设置禁止80端口接受ack包和禁止443端口接受syn包时： 123sudo iptables -I INPUT -p ICMP -j DROPsudo iptables -I INPUT -p tcp --tcp-flags ALL ACK --dport 80 -j DROPsudo iptables -I INPUT -p tcp --tcp-flags">
+<meta name="keywords" content="normal">
 <meta property="og:type" content="article">
-<meta property="og:title" content="A funny p1g">
-<meta property="og:url" content="http://yoursite.com/2020/06/03/2020-5-23/index.html">
+<meta property="og:title" content="CTF比赛学习笔记第一周">
+<meta property="og:url" content="http://yoursite.com/2020/05/23/2020-5-23/index.html">
 <meta property="og:site_name" content="A funny p1g">
-<meta property="og:description" content="CTF比赛学习笔记 第一周 #1.Nmap扫描使用心得： 当防火墙设置禁止80端口接受ack包和禁止443端口接受syn包时： 123sudo iptables -I INPUT -p ICMP -j DROPsudo iptables -I INPUT -p tcp --tcp-flags ALL ACK --dport 80 -j DROPsudo iptables -I INPUT -p t">
+<meta property="og:description" content="#1.Nmap扫描使用心得： 当防火墙设置禁止80端口接受ack包和禁止443端口接受syn包时： 123sudo iptables -I INPUT -p ICMP -j DROPsudo iptables -I INPUT -p tcp --tcp-flags ALL ACK --dport 80 -j DROPsudo iptables -I INPUT -p tcp --tcp-flags">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-05-23T15:29:03.647Z">
+<meta property="og:updated_time" content="2020-06-03T08:06:48.934Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="A funny p1g">
-<meta name="twitter:description" content="CTF比赛学习笔记 第一周 #1.Nmap扫描使用心得： 当防火墙设置禁止80端口接受ack包和禁止443端口接受syn包时： 123sudo iptables -I INPUT -p ICMP -j DROPsudo iptables -I INPUT -p tcp --tcp-flags ALL ACK --dport 80 -j DROPsudo iptables -I INPUT -p t">
+<meta name="twitter:title" content="CTF比赛学习笔记第一周">
+<meta name="twitter:description" content="#1.Nmap扫描使用心得： 当防火墙设置禁止80端口接受ack包和禁止443端口接受syn包时： 123sudo iptables -I INPUT -p ICMP -j DROPsudo iptables -I INPUT -p tcp --tcp-flags ALL ACK --dport 80 -j DROPsudo iptables -I INPUT -p tcp --tcp-flags">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/06/03/2020-5-23/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/05/23/2020-5-23/"/>
 
 
 
 
 
-  <title> | A funny p1g</title>
+  <title>CTF比赛学习笔记第一周 | A funny p1g</title>
   
 
 
@@ -242,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/03/2020-5-23/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/23/2020-5-23/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="1yy">
@@ -259,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">CTF比赛学习笔记第一周</h1>
         
 
         <div class="post-meta">
@@ -271,8 +272,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-03T15:59:59+08:00">
-                2020-06-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-23T10:00:00+08:00">
+                2020-05-23
               </time>
             
 
@@ -309,9 +310,7 @@
       
 
       
-        <p>CTF比赛学习笔记<br>
-第一周<br>
-#1.Nmap扫描使用心得：<br>
+        <p>#1.Nmap扫描使用心得：<br>
 当防火墙设置禁止80端口接受ack包和禁止443端口接受syn包时：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo iptables -I INPUT -p ICMP -j DROP</span><br><span class="line">sudo iptables -I INPUT -p tcp --tcp-flags ALL ACK --dport 80 -j DROP</span><br><span class="line">sudo iptables -I INPUT -p tcp --tcp-flags ALL SYN --dport 443 -j DROP</span><br></pre></td></tr></table></figure>
 <p>指定80端口发送syn包<br>
@@ -361,6 +360,12 @@ POST型注入一般用 sqlmap -u “url” --data “POST参数”</p>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/normal/" rel="tag"><i class="fa fa-moon-o" aria-hidden="true"></i> normal</a>
+          
+        </div>
+      
 
       
       
@@ -370,8 +375,8 @@ POST型注入一般用 sqlmap -u “url” --data “POST参数”</p>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/05/31/2020-5-31 (2)/" rel="next" title="CTF比赛学习笔记第二周">
-                <i class="fa fa-chevron-left"></i> CTF比赛学习笔记第二周
+              <a href="/2020/01/08/2020-1-8/" rel="next" title="准备GWY考试">
+                <i class="fa fa-chevron-left"></i> 准备GWY考试
               </a>
             
           </div>
@@ -380,8 +385,8 @@ POST型注入一般用 sqlmap -u “url” --data “POST参数”</p>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/06/03/2020-5-31/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/05/23/2020-5-31/" rel="prev" title="CTF比赛学习笔记第二周">
+                CTF比赛学习笔记第二周 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -454,7 +459,7 @@ POST型注入一般用 sqlmap -u “url” --data “POST参数”</p>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-count">46</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
